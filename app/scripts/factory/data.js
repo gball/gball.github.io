@@ -34,7 +34,7 @@ angular.module('gballgithubioApp')
               schoolName: content.gsx$schoolname.$t,
               location: content.gsx$location.$t,
               degree: content.gsx$degree.$t,
-              gpa: parseInt(content.gsx$gpa.$t),
+              gpa: Number(content.gsx$gpa.$t),
               date: content.gsx$date.$t
             };
 
@@ -92,7 +92,7 @@ angular.module('gballgithubioApp')
             var content = response.feed.entry[i];
             var obj = {
               name: content.gsx$name.$t,
-              strength: parseInt(content.gsx$strength.$t)
+              strength: Number(content.gsx$strength.$t)
             };
 
             tmpResponse.push(obj);
@@ -119,7 +119,7 @@ angular.module('gballgithubioApp')
             var content = response.feed.entry[i];
             var obj = {
               name: content.gsx$name.$t,
-              strength: parseInt(content.gsx$strength.$t)
+              strength: Number(content.gsx$strength.$t)
             };
 
             tmpResponse.push(obj);
