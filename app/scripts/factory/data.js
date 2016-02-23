@@ -8,11 +8,12 @@ angular.module('gballgithubioApp')
         .success(function(response){
           var content = response.feed.entry[0];
           response = {
-            name: content.gsx$name.$t,
-            location: content.gsx$location.$t,
-            backgroundInfo: content.gsx$backgroundinfo.$t
+            aboutMe: {
+              name: content.gsx$name.$t,
+              location: content.gsx$location.$t,
+              backgroundInfo: content.gsx$backgroundinfo.$t
+            }
           };
-
           cb(undefined, response);
         })
         .error(function(err){
@@ -37,7 +38,9 @@ angular.module('gballgithubioApp')
             tmpResponse.push(obj);
           }
 
-          response = tmpResponse;
+          response = {
+            education: tmpResponse
+          };
           cb(undefined, response);
         })
         .error(function(err){
@@ -62,7 +65,9 @@ angular.module('gballgithubioApp')
             tmpResponse.push(obj);
           }
 
-          response = tmpResponse;
+          response = {
+            experience: tmpResponse
+          };
           cb(undefined, response);
         })
         .error(function(err){
@@ -84,7 +89,9 @@ angular.module('gballgithubioApp')
             tmpResponse.push(obj);
           }
 
-          response = tmpResponse;
+          response = {
+            skills: tmpResponse
+          };
           cb(undefined, response);
         })
         .error(function(err){
@@ -106,7 +113,9 @@ angular.module('gballgithubioApp')
             tmpResponse.push(obj);
           }
 
-          response = tmpResponse;
+          response = {
+            tools: tmpResponse
+          };
           cb(undefined, response);
         })
         .error(function(err){
@@ -128,7 +137,9 @@ angular.module('gballgithubioApp')
             tmpResponse.push(obj);
           }
 
-          response = tmpResponse;
+          response = {
+            passion: tmpResponse
+          };
           cb(undefined, response);
         })
         .error(function(err){
@@ -150,7 +161,9 @@ angular.module('gballgithubioApp')
             tmpResponse.push(obj);
           }
 
-          response = tmpResponse;
+          response = {
+            quotes: tmpResponse
+          };
           cb(undefined, response);
         })
         .error(function(err){
