@@ -32,13 +32,14 @@ angular.module('gballgithubioApp')
 	  $scope.tools = tools.tools;
 	  $scope.passion = passion.passion;
 	  $scope.quotes = quotes.quotes;
-
+	  
 	  // get current age of mine
 	  $scope.getAge = function () {
 	  	// current date minus birthday
 	  	var timeInMS = new Date() - new Date('1993-01-23');
-			var days = timeInMS / 1000 / (60 * 60 * 24);
-			var age = Math.floor(days / 365);
+		var days = timeInMS / 1000 / (60 * 60 * 24);
+		var age = Math.floor(days / 365);
+		
 	  	return age;
 	  };
   }]);
