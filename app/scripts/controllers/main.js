@@ -25,14 +25,14 @@ angular.module('gballgithubioApp')
 	           	 passion,
 	           	 quotes) {
 
-	  $scope.aboutMe = aboutMe;
-	  $scope.experience = experience;
-	  $scope.education = education;
-	  $scope.skills = skills;
-	  $scope.tools = tools;
-	  $scope.passion = passion;
-	  $scope.quotes = quotes;
-	  
+	  $scope.aboutMe = aboutMe.aboutMe;
+	  $scope.experience = experience.experience;
+	  $scope.education = education.education;
+	  $scope.skills = skills.skills;
+	  $scope.tools = tools.tools;
+	  $scope.passion = passion.passion;
+	  $scope.quotes = quotes.quotes;
+
 	  // get current age of mine
 	  $scope.getAge = function () {
 	  	// current date minus birthday
