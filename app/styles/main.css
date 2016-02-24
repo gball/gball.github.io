@@ -1,0 +1,129 @@
+html { 
+  font-size: 62.5%; 
+}
+ 
+#arrow {
+  background: url('../images/arrow.png') center no-repeat;
+  top: 85vh;
+  width: 80px;
+  height: 60px;
+  position: absolute;
+  left: 45%;
+  z-index: 999;
+  -webkit-animation: 2s bounce infinite;
+  -moz-animation: 2s bounce infinite;
+  -o-animation: 2s bounce infinite;
+  animation: 2s bounce infinite;
+}
+
+@-webkit-keyframes bounce {
+    0%   {margin-top: 20px;}
+    50%  {margin-top: 0px}
+    100% {margin-top: 20px;}
+}
+@-moz-keyframes bounce {
+    0%   {margin-top: 20px;}
+    50%  {margin-top: 0px}
+    100% {margin-top: 20px;}
+}
+@-o-keyframes bounce {
+    0%   {margin-top: 20px;}
+    50%  {margin-top: 0px}
+    100% {margin-top: 20px;}
+}
+@keyframes bounce {
+    0%   {margin-top: 20px;}
+    50%  {margin-top: 0px}
+    100% {margin-top: 20px;}
+}
+
+#header-image {
+  background: url("../images/sf-l.png") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 499px) {
+  #header-image {
+    align-items: center;
+    background-repeat: no-repeat;
+    background: url("../images/sf-xs.png") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #arrow {
+    background: url('../images/arrow.png') center no-repeat;
+    top: 85vh;
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    left: 45%;
+    z-index: 999;
+    -webkit-animation: 2s bounce infinite;
+    -moz-animation: 2s bounce infinite;
+    -o-animation: 2s bounce infinite;
+    animation: 2s bounce infinite;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  #header-image {
+    align-items: center;
+    background-repeat: no-repeat;
+    background: url("../images/sf-s.png") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 985px) {
+  #header-image {
+    align-items: center;
+    background-repeat: no-repeat;
+    background: url("../images/sf-m.png") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+#header-image div {
+  color: white;
+  font-family: Helvetica;
+  font-size: 5vw;
+  padding-top: 18vh;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+
+#header-image hr {
+    margin: 0 30% 0 30%;
+    opacity: 0.8;
+}
+
+#header-image h3 {
+  color: white;
+  font-family: Courier New;
+  font-size: 3vw;
+  text-align: center;
+  margin-top: 2vh;
+}
