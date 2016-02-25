@@ -1,7 +1,7 @@
 html { 
   font-size: 62.5%; 
 }
- 
+
 #arrow {
   background: url('../images/arrow.png') center no-repeat;
   top: 85vh;
@@ -50,6 +50,74 @@ html {
   margin: 0px;
 }
 
+#header-image div {
+  color: white;
+  font-family: Helvetica;
+  font-size: 5vw;
+  padding-top: 18vh;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+
+#header-image hr {
+    margin: 0 30% 0 30%;
+    opacity: 0.8;
+}
+
+#header-image h3 {
+  color: white;
+  font-family: Courier New;
+  font-size: 3vw;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: Courier New;
+  color: white;
+  padding: 1vh 0;
+}
+
+#selfie {
+  height: 250px; 
+  width: 250px;
+  padding: 2px;
+  margin: 7vh auto auto auto;
+  background-color: white;
+  display: block;
+  border-radius: 50%;
+}
+
+#section-about {
+  background-color: #E45F56;
+  display: inline-block;
+}
+
+#about-info {
+  padding: 0 10vw 6vh 10vw;
+  font-size: 1.4rem;
+}
+
+#about-mini-info {
+  padding: 6vh 35vw 3vh 35vw;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  padding: 5vh 0 1vh 0;
+  font-family: Helvetica;
+}
+
+hr {
+  margin: 0 10%;
+}
+
 @media only screen and (max-width: 499px) {
   #header-image {
     align-items: center;
@@ -76,6 +144,43 @@ html {
     -o-animation: 2s bounce infinite;
     animation: 2s bounce infinite;
   }
+
+  #selfie {
+    height: 100px; 
+    width: 100px;
+    padding: 1px;
+    margin: 7vh auto auto auto;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+  }
+
+  #about-info {
+    padding: 0.75vh 10vw 6vh 10vw;
+    font-size: 1.1rem;
+  }
+
+  #about-mini-info {
+    padding: 6vh 20vw 3vh 20vw;
+    text-align: center;
+    font-size: 1.35rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    padding: 5vh 0 1vh 0;
+    font-family: Helvetica;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    font-family: Courier New;
+    color: white;
+    padding: 1vh 0;
+  }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 700px) {
@@ -89,6 +194,43 @@ html {
     background-size: cover;
     height: 100vh;
     width: 100vw;
+  }
+
+  #selfie {
+    height: 150px; 
+    width: 150px;
+    padding: 1px;
+    margin: 7vh auto auto auto;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+  }
+
+  #about-info {
+    padding: 0.75vh 10vw 6vh 10vw;
+    font-size: 1.2rem;
+  }
+
+  #about-mini-info {
+    padding: 6vh 28vw 3vh 28vw;
+    text-align: center;
+    font-size: 1.45rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    padding: 5vh 0 1vh 0;
+    font-family: Helvetica;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: Courier New;
+    color: white;
+    padding: 1vh 0;
   }
 }
 
@@ -104,26 +246,41 @@ html {
     height: 100vh;
     width: 100vw;
   }
-}
 
-#header-image div {
-  color: white;
-  font-family: Helvetica;
-  font-size: 5vw;
-  padding-top: 18vh;
-  text-align: center;
-  margin-bottom: 1vh;
-}
+  #selfie {
+    height: 200px; 
+    width: 200px;
+    padding: 2px;
+    margin: 7vh auto auto auto;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+  }
 
-#header-image hr {
-    margin: 0 30% 0 30%;
-    opacity: 0.8;
-}
+  #about-info {
+    padding: 0.75vh 10vw 6vh 10vw;
+    font-size: 1.3rem;
+  }
 
-#header-image h3 {
-  color: white;
-  font-family: Courier New;
-  font-size: 3vw;
-  text-align: center;
-  margin-top: 2vh;
+  #about-mini-info {
+    padding: 6vh 32vw 3vh 32vw;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+    padding: 5vh 0 1vh 0;
+    font-family: Helvetica;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 3.1rem;
+    font-family: Courier New;
+    color: white;
+    padding: 1vh 0;
+  }
 }
