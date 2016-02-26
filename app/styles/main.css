@@ -1,3 +1,60 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+}
+h2,
+.h2 {
+  font-size: 30px;
+}
+h3,
+.h3 {
+  font-size: 24px;
+}
+
 html { 
   font-size: 62.5%; 
 }
@@ -107,7 +164,7 @@ h2 {
 }
 
 #about-mini-info {
-  padding: 6vh 35vw 3vh 35vw;
+  padding: 4vh 35vw 1vh 35vw;
   text-align: center;
   font-size: 1.7rem;
 }
@@ -190,7 +247,7 @@ hr {
   }
 
   #about-mini-info {
-    padding: 6vh 20vw 3vh 20vw;
+    padding: 4vh 20vw 1vh 20vw;
     text-align: center;
     font-size: 1.35rem;
   }
@@ -258,7 +315,7 @@ hr {
   }
 
   #about-mini-info {
-    padding: 6vh 28vw 3vh 28vw;
+    padding: 4vh 28vw 1vh 28vw;
     text-align: center;
     font-size: 1.45rem;
   }
@@ -326,7 +383,7 @@ hr {
   }
 
   #about-mini-info {
-    padding: 6vh 32vw 3vh 32vw;
+    padding: 4vh 32vw 1vh 32vw;
     text-align: center;
     font-size: 1.6rem;
   }
