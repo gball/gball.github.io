@@ -116,15 +116,11 @@ html {
 #header-image h1 {
   color: white;
   font-family: Helvetica;
-  font-size: 5.5rem;
+  font-size: 5.3rem;
   padding-top: 18vh;
   text-align: center;
-  margin: 0 0 1vh 0;
-}
-
-#header-image hr {
-    margin: 0 30% 0 30%;
-    opacity: 0.8;
+  border-bottom: 1px solid white;
+  margin: 0 30% 1vh 30%; 
 }
 
 #header-image h3 {
@@ -220,7 +216,8 @@ hr {
     font-size: 2rem;
     padding-top: 18vh;
     text-align: center;
-    margin: 0 0 1vh 0;
+    border-bottom: 1px solid white;
+    margin: 0 30% 1vh 30%; 
   }
 
   #header-image h3 {
@@ -285,10 +282,11 @@ hr {
   #header-image h1 {
     color: white;
     font-family: Helvetica;
-    font-size: 2.9rem;
+    font-size: 2.7rem;
     padding-top: 18vh;
     text-align: center;
-    margin: 0 0 1vh 0;
+    border-bottom: 1px solid white;
+    margin: 0 30% 1vh 30%;
   }
 
   #header-image h3 {
@@ -356,7 +354,8 @@ hr {
     font-size: 3.7rem;
     padding-top: 18vh;
     text-align: center;
-    margin: 0 0 1vh 0;
+    border-bottom: 1px solid white;
+    margin: 0 30% 1vh 30%;
   }
 
   #header-image h3 {
