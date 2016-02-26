@@ -11,7 +11,8 @@
 angular
   .module('gballgithubioApp', [
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'smoothScroll'
   ])
   .config(function ($routeProvider) {
     $routeProvider
