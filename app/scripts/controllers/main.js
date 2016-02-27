@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name gballgithubioApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the gballgithubioApp
- */
 angular.module('gballgithubioApp')
   .controller('MainCtrl', ['$scope',
   												 'aboutMe',
@@ -33,13 +26,23 @@ angular.module('gballgithubioApp')
 	  $scope.passion = passion.passion;
 	  $scope.quotes = quotes.quotes;
 
-	  // arrow down visual shows and hides
+	  // some jquery for arrow down and navigation animation
+	  $( "#navbar" ).hide();
+
 		$(window).scroll(function () {
 		  if ($( window ).scrollTop() > 60) {
 		    $( "#arrow" ).stop().fadeOut(300);
 		  } else if ($( window ).scrollTop() <= 60) {
 		    $( "#arrow" ).stop().fadeIn(300);
 		  }
+		});
+		
+		$( "#menu-icon" ).click(function () {
+			if ($( "#navbar" ).css( "display" ) === "none") { 
+				$( "#navbar" ).slideDown();
+			} else {
+				$( "#navbar" ).slideUp();
+			}
 		});
 
 	  // get current age of mine
