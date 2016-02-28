@@ -8,10 +8,10 @@
   	  <a href="#/" nav-click scroll-to="section-about" ng-class="{true:'active'}[isActive == 2]">about</a>
 		</li>
 		<li>
-  	  <a href="#/" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 3]">careers</a>
+  	  <a href="#/" nav-click scroll-to="section-education" ng-class="{true:'active'}[isActive == 3]">school</a>
 		</li>
 		<li>
-  	  <a href="#/" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 4]">school</a>
+  	  <a href="#/" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 4]">careers</a>
 		</li>
 		<li>
   	  <a href="#/" id="nav-name" class="active" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 1]">rsb</a>
@@ -61,5 +61,53 @@
 		<p id="about-info">
 			{{aboutMe.backgroundInfo}}
 		</p>
+	</div>
+</div>
+<!-- Education section -->
+<div id="section-education">
+	<div class="container">
+		<h1>
+			Education
+		</h1>
+		<h2>
+			{{quotes[1].quote}}
+		</h2>
+		<hr>
+		<div class="row" id="education-font">
+			<div class="col-6">
+				<div id="box-cat">
+					<img id="education-img" src="../images/bobcat.svg">
+					<div>
+						{{education[1].schoolName}}
+					</div>
+					<div>
+						{{education[1].degree}}
+					</div>
+					<div>
+						{{education[1].date}}
+					</div>
+					<div>
+						GPA {{education[1].gpa}}
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div id="box-dragon">
+					<img id="education-img" src="../images/dragon.svg">
+					<div >
+						{{education[0].schoolName}}
+					</div>
+					<div>
+						{{education[0].degree}}
+					</div>
+					<div >
+						{{education[0].date}}
+					</div>
+					<div>
+						{{education[0].location}}
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
