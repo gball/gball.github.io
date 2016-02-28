@@ -20,7 +20,7 @@ angular.module('gballgithubioApp')
     function link (scope) {
       angular.element($window).bind("scroll", function() {
         var headerTop = document.getElementById('header-image').offsetTop;
-        var headerBottom = document.getElementById('header-image').offsetHeight;
+        var headerBottom = document.getElementById('header-image').offsetHeight - 10;
         var aboutBottom = document.getElementById('section-about').offsetHeight - 10 + headerBottom;
         var educationBottom = document.getElementById('section-education').offsetHeight + aboutBottom;
 
