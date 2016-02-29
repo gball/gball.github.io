@@ -11,7 +11,8 @@ angular.module('gballgithubioApp')
             aboutMe: {
               name: content.gsx$name.$t,
               location: content.gsx$location.$t,
-              backgroundInfo: content.gsx$backgroundinfo.$t
+              backgroundInfo: content.gsx$backgroundinfo.$t,
+              imageLink: content.gsx$imagelink.$t
             }
           };
 
@@ -35,7 +36,8 @@ angular.module('gballgithubioApp')
               location: content.gsx$location.$t,
               degree: content.gsx$degree.$t,
               gpa: Number(content.gsx$gpa.$t),
-              date: content.gsx$date.$t
+              date: content.gsx$date.$t,
+              imageLink: content.gsx$imagelink.$t
             };
 
             tmpResponse.push(obj);
@@ -65,7 +67,8 @@ angular.module('gballgithubioApp')
               location: content.gsx$location.$t,
               position: content.gsx$position.$t,
               info: content.gsx$info.$t,
-              date: content.gsx$date.$t
+              date: content.gsx$date.$t,
+              imageLink: content.gsx$imagelink.$t
             };
 
             tmpResponse.push(obj);
@@ -146,7 +149,8 @@ angular.module('gballgithubioApp')
             var content = response.feed.entry[i];
             var obj = {
               type: content.gsx$type.$t,
-              info: content.gsx$info.$t
+              info: content.gsx$info.$t,
+              imageLink: content.gsx$imagelink.$t
             };
 
             tmpResponse.push(obj);

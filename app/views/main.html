@@ -49,7 +49,7 @@
 			{{quotes[0].quote}}
 		</h2>
 		<hr>
-		<img src="../images/me.jpg" id="selfie" alt="Robin Ball Selfie">
+		<img src={{aboutMe.imageLink}} id="selfie" alt="Robin Ball Selfie">
 		<div id="about-mini-info">
 			<p>
 				{{aboutMe.name}}
@@ -76,7 +76,7 @@
 		<div class="row" id="education-font">
 			<div class="col-6">
 				<div id="box-cat">
-					<img id="education-img" src="../images/bobcat.svg">
+					<img id="education-img" src={{education[1].imageLink}}>
 					<div>
 						{{education[1].schoolName}}
 					</div>
@@ -93,7 +93,7 @@
 			</div>
 			<div class="col-6">
 				<div id="box-dragon">
-					<img id="education-img" src="../images/dragon.svg">
+					<img id="education-img" src={{education[0].imageLink}}>
 					<div >
 						{{education[0].schoolName}}
 					</div>
