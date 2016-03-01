@@ -51,12 +51,12 @@
 		<hr>
 		<img ng-src="{{aboutMe.imageLink}}" id="selfie" alt="Robin Ball Selfie">
 		<div id="about-mini-info">
-			<p>
+			<h3>
 				{{aboutMe.name}}
-			</p>
-			<p>
+			</h3>
+			<h4>
 				{{getAge()}} yeard old, {{aboutMe.location}}
-			</p>
+			</h4>
 		</div>
 		<p id="about-info">
 			{{aboutMe.backgroundInfo}}
@@ -77,35 +77,29 @@
 			<div class="col-6">
 				<div id="box-cat">
 					<img id="education-img" ng-src="{{education[1].imageLink}}">
-					<div>
+					<p>
 						{{education[1].schoolName}}
-					</div>
-					<div>
+					<br>
 						{{education[1].degree}}
-					</div>
-					<div>
+					<br>
 						{{education[1].date}}
-					</div>
-					<div>
+					<br>
 						GPA {{education[1].gpa}}
-					</div>
+					</p>
 				</div>
 			</div>
 			<div class="col-6">
 				<div id="box-dragon">
 					<img id="education-img" ng-src="{{education[0].imageLink}}">
-					<div >
+					<p>
 						{{education[0].schoolName}}
-					</div>
-					<div>
+					<br>
 						{{education[0].degree}}
-					</div>
-					<div >
+					<br>
 						{{education[0].date}}
-					</div>
-					<div>
+					<br>
 						{{education[0].location}}
-					</div>
+					</p>
 				</div>
 			</div>
 		</div>

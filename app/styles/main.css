@@ -71,7 +71,7 @@ h1 {
   text-align: center;
   font-size: 4rem;
   color: white;
-  padding-top: 6vh;
+  padding-top: 60px;
   font-family: Helvetica;
 }
 
@@ -246,8 +246,8 @@ About Me Section Styles
 ***************************/
 
 #selfie {
-  height: 250px; 
-  width: 250px;
+  height: 300px; 
+  width: 300px;
   padding: 2px;
   margin: 7vh auto auto auto;
   background-color: white;
@@ -258,17 +258,17 @@ About Me Section Styles
 #section-about {
   background-color: #E45F56;
   display: inline-block;
+  width: 100%;
 }
 
 #about-info {
-  padding-bottom: 6vh;
-  font-size: 1.4rem;
+  padding-bottom: 100px;
+  font-size: 1.6rem;
 }
 
 #about-mini-info {
   padding: 4vh 25vw 1vh 25vw;
   text-align: center;
-  font-size: 1.7rem;
 }
 
 /***************************
@@ -415,7 +415,7 @@ Media Queries Styles
     text-align: center;
     font-size: 2.5rem;
     color: white;
-    padding-top: 6vh;
+    padding-top: 25px;
     font-family: Helvetica;
   }
 
@@ -527,8 +527,8 @@ Media Queries Styles
   }
 
   #selfie {
-    height: 100px; 
-    width: 100px;
+    height: 150px; 
+    width: 150px;
     padding: 1px;
     margin: 7vh auto auto auto;
     background-color: white;
@@ -537,14 +537,13 @@ Media Queries Styles
   }
 
   #about-info {
-    padding: 0.75vh 2vw 6vh 2vw;
-    font-size: 1.1rem;
+    padding: 0.75vh 2% 50px 2%;
+    font-size: 1.2rem;
   }
 
   #about-mini-info {
     padding: 4vh 10vw 1vh 10vw;
     text-align: center;
-    font-size: 1.35rem;
   }
 
   .col-6 {
@@ -620,7 +619,7 @@ Media Queries Styles
     text-align: center;
     font-size: 3rem;
     color: white;
-    padding-top: 6vh;
+    padding-top: 50px;
     font-family: Helvetica;
   }
 
@@ -712,8 +711,8 @@ Media Queries Styles
   }
 
   #selfie {
-    height: 150px; 
-    width: 150px;
+    height: 200px; 
+    width: 200px;
     padding: 1px;
     margin: 7vh auto auto auto;
     background-color: white;
@@ -722,14 +721,13 @@ Media Queries Styles
   }
 
   #about-info {
-    padding: 0.75vh 2vw 6vh 2vw;
-    font-size: 1.2rem;
+    padding: 0.75vh 2% 75px 2%;
+    font-size: 1.4rem;
   }
 
   #about-mini-info {
-    padding: 4vh 18vw 1vh 18vw;
+    padding: 4vh 16vw 1vh 16vw;
     text-align: center;
-    font-size: 1.45rem;
   }
   
   .col-6 {
@@ -757,7 +755,7 @@ Media Queries Styles
     padding-bottom: 40px;
     border-top: thick solid #F0A021;
     transition: 0.2s all ease-out;
-    margin: 0 2% 50px 2%;
+    margin: 0 2% 75px 2%;
   }
 
   .experience-text-order {
@@ -805,7 +803,7 @@ Media Queries Styles
     text-align: center;
     font-size: 3.5rem;
     color: white;
-    padding-top: 6vh;
+    padding-top: 60px;
     font-family: Helvetica;
   }
 
@@ -860,8 +858,8 @@ Media Queries Styles
   }
 
   #selfie {
-    height: 200px; 
-    width: 200px;
+    height: 250px; 
+    width: 250px;
     padding: 2px;
     margin: 7vh auto auto auto;
     background-color: white;
@@ -870,14 +868,13 @@ Media Queries Styles
   }
 
   #about-info {
-    padding: 0.75vh 0 6vh 0;
-    font-size: 1.3rem;
+    padding: 0.75vh 0 100px 0;
+    font-size: 1.4rem;
   }
 
   #about-mini-info {
-    padding: 4vh 22vw 1vh 22vw;
+    padding: 4vh 20vw 1vh 20vw;
     text-align: center;
-    font-size: 1.6rem;
   }
 
   #education-img {
