@@ -18,18 +18,21 @@ angular.module('gballgithubioApp')
   // on scroll, updates the nav links state depending on current height of page
   .directive("navScrollUpdate", ['$window', function ($window) {
     function link (scope) {
-      angular.element($window).bind("scroll", function() {
+      angular.element($window).bind("scroll resize", function() {
         var headerTop = document.getElementById('header-image').offsetTop;
         var headerBottom = document.getElementById('header-image').offsetHeight - 10;
         var aboutBottom = document.getElementById('section-about').offsetHeight - 10 + headerBottom;
-        var educationBottom = document.getElementById('section-education').offsetHeight + aboutBottom;
-
+        var educationBottom = document.getElementById('section-education').offsetHeight - 10 + aboutBottom;
+        var experienceBottom = document.getElementById('section-education').offsetHeight + educationBottom;
+        
         if (headerTop <= scope.scrollPosition && scope.scrollPosition < headerBottom) {
           scope.isActive = 1;
         } else if (headerBottom <= scope.scrollPosition && scope.scrollPosition < aboutBottom) {
           scope.isActive = 2;
-        } else if (aboutBottom <= scope.scrollPosition && scope.scrollPosition < educationBottom ) {
+        } else if (aboutBottom <= scope.scrollPosition && scope.scrollPosition < educationBottom) {
           scope.isActive = 3;
+        } else if (educationBottom <= scope.scrollPosition && scope.scrollPosition < experienceBottom) {
+          scope.isActive = 4;
         }
 
         scope.scrollPosition = this.pageYOffset;

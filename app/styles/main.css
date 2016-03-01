@@ -4,6 +4,10 @@ HTML Tags Styles
 ****************************
 ***************************/
 
+html { 
+  font-size: 62.5%; 
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -44,8 +48,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -61,10 +65,6 @@ h2,
 h3,
 .h3 {
   font-size: 24px;
-}
-
-html { 
-  font-size: 62.5%; 
 }
 
 h1 {
@@ -127,6 +127,7 @@ CSS classes Styles
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 100px 0;
 }
 
 /***************************
@@ -146,6 +147,7 @@ Navigation Styles
   height: 60px;
   background-color: white;
   background-color: rgba(255,255,255,0.7);
+  z-index: 998;
 }
 
 #menu-icon {
@@ -156,6 +158,7 @@ Navigation Styles
   height: 48px;
   display: block;
   top: 0.5vh;
+  z-index: 999;
 }
 
 /***************************
@@ -277,6 +280,7 @@ Education Section Styles
 #section-education {
   background-color: #A3D39C;
   display: inline-block;
+  width: 100%;
 }
 
 #education-img {
@@ -323,6 +327,87 @@ Education Section Styles
 
 /***************************
 ****************************
+Experience Section Styles
+****************************
+***************************/
+
+#section-experience {
+  background-color: #7ACCC8;
+  display: inline-block;
+  width: 100%;
+}
+
+.text-experience {
+  margin: auto;
+  text-align: center;
+}
+
+.text-mini-experience {
+  padding: 30px;
+}
+
+.experience-text-order {
+  order: 1;
+}
+
+.experience-img-order {
+  order: 2;
+}
+
+.img-height {
+  height: 400px;
+}
+
+.img-experience-left {
+  width: 0;
+  height: 0;
+}
+
+.slide-in-left {
+  animation-duration: 2s;
+  animation-name: slideinleft;
+  width: 100%;
+  height: 400px;
+  margin-left: 0%;
+}
+
+@keyframes slideinleft {
+  0% {
+    margin-left: -150%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+.img-experience-right {
+  width: 0;
+  height: 0;
+}
+
+.slide-in-right {
+  animation-duration: 2s;
+  animation-name: slideinright;
+  margin-left: 0%;
+  width: 100%;
+  height: 400px;
+}
+
+@keyframes slideinright {
+  0% {
+    opacity: 0;
+    margin-left: 150%;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0%;
+  }
+}
+
+/***************************
+****************************
 Media Queries Styles
 ****************************
 ***************************/
@@ -344,6 +429,14 @@ Media Queries Styles
     padding-bottom: 1vh;
   }
 
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
   hr {
     margin: 0 2%;
   }
@@ -362,6 +455,10 @@ Media Queries Styles
   li {
     float: center;
     margin: 2.5vh 0;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 
   #navbar {
@@ -452,11 +549,6 @@ Media Queries Styles
     font-size: 1.35rem;
   }
 
-  .row {
-    width: 100%;
-    display: inline-block;
-  }
-
   .col-6 {
     width: 100%;
   }
@@ -465,6 +557,45 @@ Media Queries Styles
     height: 120px;
     width: 100%;
     padding: 15% 0;
+  }
+
+  .experience-text-order {
+    order: 2;
+  }
+
+  .experience-img-order {
+    order: 1;
+  }
+
+  .slide-in-right {
+    animation-duration: 2s;
+    animation-name: slideinright;
+    width: 98%;
+    height: 250px;
+    margin-left: 0%;
+  }
+
+  .slide-in-left {
+    animation-duration: 2s;
+    animation-name: slideinleft;
+    width: 98%;
+    height: 250px;
+    margin-left: 0%;
+  }
+
+  .img-height {
+    height: 275px;
+  }
+
+  .text-mini-experience {
+    padding: 15px;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0;
   }
 }
 
@@ -483,6 +614,14 @@ Media Queries Styles
     font-family: Courier New;
     color: white;
     padding-bottom: 1vh;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
   }
 
   hr {
@@ -505,6 +644,10 @@ Media Queries Styles
     margin: 2.5vh 0;
   }
   
+  p {
+    font-size: 1.2rem;
+  }
+
   #navbar {
     position: fixed;
     width: 11%;
@@ -572,12 +715,7 @@ Media Queries Styles
     text-align: center;
     font-size: 1.45rem;
   }
-
-  .row {
-    width: 100%;
-    display: inline-block;
-  }
-
+  
   .col-6 {
     width: 100%;
   }
@@ -586,6 +724,45 @@ Media Queries Styles
     height: 200px;
     width: 100%;
     padding: 15% 0;
+  }
+
+  .experience-text-order {
+    order: 2;
+  }
+
+  .experience-img-order {
+    order: 1;
+  }
+
+  .slide-in-right {
+    animation-duration: 2s;
+    animation-name: slideinright;
+    width: 98%;
+    height: 300px;
+    margin-left: 0%;
+  }
+
+  .slide-in-left {
+    animation-duration: 2s;
+    animation-name: slideinleft;
+    width: 98%;
+    height: 300px;
+    margin-left: 0%;
+  }
+
+  .img-height {
+    height: 325px;
+  }
+
+  .text-mini-experience {
+    padding: 20px;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 75px 0;
   }
 }
 
@@ -604,6 +781,18 @@ Media Queries Styles
     font-family: Courier New;
     color: white;
     padding-bottom: 1vh;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.2rem;
   }
 
   #header-image {
@@ -661,5 +850,25 @@ Media Queries Styles
     height: 135px;
     width: 100%;
     padding: 15% 0;
+  }
+
+  .slide-in-left {
+    animation-duration: 2s;
+    animation-name: slideinleft;
+    width: 100%;
+    height: 350px;
+    margin-left: 0%;
+  }
+
+  .slide-in-right {
+    animation-duration: 2s;
+    animation-name: slideinright;
+    width: 100%;
+    height: 350px;
+    margin-left: 0%;
+  }
+
+  .img-height {
+    height: 350px;
   }
 }
