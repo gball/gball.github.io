@@ -25,6 +25,7 @@ angular.module('gballgithubioApp')
 	  $scope.tools = tools.tools;
 	  $scope.passion = passion.passion;
 	  $scope.quotes = quotes.quotes;
+	  $scope.passionLength = $scope.passion.length;
 
 	  // some jquery for arrow down and navigation animation
 	  $( "#navbar" ).hide();

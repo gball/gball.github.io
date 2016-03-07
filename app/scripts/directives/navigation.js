@@ -15,6 +15,7 @@ angular.module('gballgithubioApp')
       link: link
     };
   })
+
   // on scroll, updates the nav links state depending on current height of page
   .directive("navScrollUpdate", ['$window', function ($window) {
     function link (scope) {
@@ -23,7 +24,8 @@ angular.module('gballgithubioApp')
         var headerBottom = document.getElementById('header-image').offsetHeight - 10;
         var aboutBottom = document.getElementById('section-about').offsetHeight - 10 + headerBottom;
         var educationBottom = document.getElementById('section-education').offsetHeight - 10 + aboutBottom;
-        var experienceBottom = document.getElementById('section-education').offsetHeight + educationBottom;
+        var experienceBottom = document.getElementById('section-experience').offsetHeight - 10 + educationBottom;
+        var passionBottom = document.getElementById('section-passion').offsetHeight - 10 + experienceBottom;
         
         if (headerTop <= scope.scrollPosition && scope.scrollPosition < headerBottom) {
           scope.isActive = 1;
@@ -33,7 +35,9 @@ angular.module('gballgithubioApp')
           scope.isActive = 3;
         } else if (educationBottom <= scope.scrollPosition && scope.scrollPosition < experienceBottom) {
           scope.isActive = 4;
-        }
+        } else if (experienceBottom <= scope.scrollPosition && scope.scrollPosition < passionBottom) {
+          scope.isActive = 5;
+        } 
 
         scope.scrollPosition = this.pageYOffset;
         scope.$apply();

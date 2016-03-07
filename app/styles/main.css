@@ -65,6 +65,7 @@ h2,
 h3,
 .h3 {
   font-size: 24px;
+  text-align: center;
 }
 
 h1 {
@@ -107,7 +108,7 @@ li {
 
 /***************************
 ****************************
-CSS classes Styles
+CSS general classes Styles
 ****************************
 ***************************/
 .active { 
@@ -344,14 +345,6 @@ Experience Section Styles
   padding: 30px;
 }
 
-.experience-text-order {
-  order: 1;
-}
-
-.experience-img-order {
-  order: 2;
-}
-
 .img-height {
   height: 400px;
 }
@@ -406,6 +399,125 @@ Experience Section Styles
 
 /***************************
 ****************************
+Passion Section Styles
+****************************
+***************************/
+
+#section-passion {
+  background-color: #4AAAA5;
+  display: inline-block;
+  width: 100%;
+}
+
+#passion-container {
+  margin: 100px 0; 
+}
+
+#col-offset {
+  margin-left: 50%;
+}
+
+.unfixed-image {
+  width: 400px;
+  position: absolute;
+  right: 8%;
+  height: 100px;
+  padding-top: 125px;
+}
+
+.unfixed-heart {
+  animation: beat 500ms alternate infinite;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  right: 8%;
+}
+
+.fixed-image {
+  width: 400px;
+  top: 25%;
+  position: fixed;
+  right: 8%;
+  height: 100px;
+  padding-top: 125px;
+}
+
+.fixed-heart {
+  animation: beat 500ms alternate infinite;
+  height: 400px;
+  width: 400px;
+  top: 25%;
+  position: fixed;
+  right: 8%;
+}
+
+@keyframes beat {
+  to {
+    transform: scale(.95);
+  }
+}
+
+.passion-order-image {
+  order: 2;
+}
+
+.passion-order-text {
+  order: 1;
+}
+
+.hide-heart {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.passion-items {
+  margin-top: 45vh;
+}
+
+.passion-item-first {
+  margin-top: 0;
+}
+
+.passion-info-header {
+  margin-top: 75px;
+}
+
+.passion-info-text {
+  text-align: center; 
+  padding: 20px;
+}
+
+.enter-0 {
+  opacity: 0.0;
+}
+
+.enter-1 {
+  opacity: 0.2;
+}
+
+.enter-2 {
+  opacity: 0.4;
+}
+
+.enter-3 {
+  opacity: 0.6;
+}
+
+.enter-4 {
+  opacity: 0.8;
+}
+
+.enter-5 {
+  opacity: 0.1;
+}
+
+.entered {
+  opacity: 1;
+}
+
+/***************************
+****************************
 Media Queries Styles
 ****************************
 ***************************/
@@ -429,6 +541,7 @@ Media Queries Styles
 
   h3 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   h4 {
@@ -612,6 +725,28 @@ Media Queries Styles
     flex-wrap: wrap;
     margin: 50px 0;
   }
+
+  .passion-order-image {
+    order: 1;
+  }
+
+  .passion-order-text {
+    order: 2;
+  }
+
+  .unfixed-image {
+    width: 100%;
+    margin: auto;
+    height: 125px;
+    padding: 0;
+    position: relative;
+    right: 0;
+  }
+
+  .passion-info-text {
+    text-align: center; 
+    padding: 5% 2%;
+  }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 700px) {
@@ -633,6 +768,7 @@ Media Queries Styles
   
   h3 {
     font-size: 2rem;
+    text-align: center;
   }
 
   h4 {
@@ -796,6 +932,28 @@ Media Queries Styles
     flex-wrap: wrap;
     margin: 75px 0;
   }
+
+  .passion-order-image {
+    order: 1;
+  }
+
+  .passion-order-text {
+    order: 2;
+  }
+
+  .unfixed-image {
+    width: 100%;
+    margin: auto;
+    height: 150px;
+    padding: 0;
+    position: relative;
+    right: 0;
+  }
+
+  .passion-info-text {
+    text-align: center; 
+    padding: 5% 2%;
+  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 985px) {
@@ -817,6 +975,7 @@ Media Queries Styles
 
   h3 {
     font-size: 2.2rem;
+    text-align: center;
   }
 
   h4 {
@@ -901,5 +1060,48 @@ Media Queries Styles
 
   .img-height {
     height: 350px;
+  }
+
+  .fixed-image {
+    width: 325px;
+    top: 25%;
+    position: fixed;
+    right: 8%;
+    height: 75px;
+    padding-top: 125px;
+  }
+
+  .fixed-heart {
+    animation: beat 500ms alternate infinite;
+    height: 350px;
+    width: 325px;
+    top: 25%;
+    position: fixed;
+    right: 8%;
+  }
+
+  .unfixed-image {
+    width: 325px;
+    position: absolute;
+    right: 8%;
+    height: 75px;
+    padding-top: 125px;
+  }
+
+  .unfixed-heart {
+    animation: beat 500ms alternate infinite;
+    height: 350px;
+    width: 325px;
+    position: absolute;
+    right: 8%;
+  }
+
+  .passion-info-header {
+    margin-top: 75px;
+  }
+
+  .passion-info-text {
+    text-align: center; 
+    padding: 0 35px;
   }
 }

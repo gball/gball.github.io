@@ -17,7 +17,7 @@
   	  <a href="#/" id="nav-name" class="active" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 1]">rsb</a>
 		</li>
 		<li>
-  	  <a href="#/" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 5]">passion</a>
+  	  <a href="#/" nav-click scroll-to="section-passion" ng-class="{true:'active'}[isActive == 5]">passion</a>
 		</li>
 		<li>
   	  <a href="#/" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 6]">abilities</a>
@@ -117,36 +117,74 @@
 		<hr>
 		<!-- iterate through experience data and place images with even index on right and odd on left -->
 		<div ng-repeat="exp in experience">
-			<div class="row" ng-if="$index % 2 == 0">
-				<div class="col-6 img-height">
-					<img slide-in-animation class="img-experience-left" ng-src="{{exp.imageLink}}">
-				</div>
-				<div class="col-6 text-experience">
-					<h3>
-						{{exp.position}}
-					</h3>
-					<h4>
-						{{exp.company}}
-					</h4>
-					<p class="text-mini-experience">
-						{{exp.info}}
-					</p>
+			<div ng-if="$index % 2 == 0">
+				<div class="row">
+					<div class="col-6 img-height">
+						<img slide-in-animation class="img-experience-left" ng-src="{{exp.imageLink}}">
+					</div>
+					<div class="col-6 text-experience">
+						<h3>
+							{{exp.position}}
+						</h3>
+						<h4>
+							{{exp.company}}
+						</h4>
+						<p class="text-mini-experience">
+							{{exp.info}}
+						</p>
+					</div>
 				</div>
 			</div>
-			<div class="row" ng-if="$index % 2 == 1">
-				<div class="col-6 text-experience experience-text-order">
-					<h3>
-						{{exp.position}}
-					</h3>
-					<h4>
-						{{exp.company}}
-					</h4>
-					<p class="text-mini-experience">
-						{{exp.info}}
-					</p>
+			<div ng-if="$index % 2 == 1">
+				<div class="row">
+					<div class="col-6 text-experience experience-text-order">
+						<h3>
+							{{exp.position}}
+						</h3>
+						<h4>
+							{{exp.company}}
+						</h4>
+						<p class="text-mini-experience">
+							{{exp.info}}
+						</p>
+					</div>
+					<div class="col-6 img-height experience-img-order">
+						<img slide-in-animation class="img-experience-right" ng-src="{{exp.imageLink}}">
+					</div>
 				</div>
-				<div class="col-6 img-height experience-img-order">
-					<img slide-in-animation class="img-experience-right" ng-src="{{exp.imageLink}}">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Passion section -->
+<div id="section-passion">
+	<div class="container">
+		<h1>
+			Passion
+		</h1>
+		<h2>
+			{{quotes[3].quote}}
+		</h2>
+		<hr>
+		<div>
+			<div id="passion-container">
+				<div class="col-6" id="col-offset">
+					<img heart-fixture src="../images/heart.svg">
+				</div>
+				<div opacity class="enter-0" ng-repeat="p in passion">
+					<div class="row" ng-class="{'passion-item-first': $index==0, 'passion-items': $index!=0}">
+						<div class="col-6 passion-order-text">
+							<h3 class="passion-info-header">
+								{{p.type}}
+							</h3>
+							<p class="passion-info-text">
+								{{p.info}}
+							</p>
+						</div>
+						<div class="col-6 passion-order-image">
+							<img passion-fixture ng-src="{{p.imageLink}}">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
