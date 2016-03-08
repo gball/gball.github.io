@@ -285,14 +285,14 @@ Education Section Styles
 }
 
 #education-img {
-  height: 200px;
+  height: 130px;
   width: 100%;
   padding: 15% 0;
 }
 
 #box-dragon {
   background-color: white;
-  margin-left: 15px;
+  margin: 0 40px;
   text-align: center;
   padding-bottom: 40px;
   border-top: thick solid #7F952D;
@@ -307,7 +307,7 @@ Education Section Styles
 
 #box-cat {
   background-color: white;
-  margin-right: 15px;
+  margin: 0 40px;
   text-align: center;
   padding-bottom: 40px;
   border-top: thick solid #F0A021;
@@ -719,7 +719,7 @@ Media Queries Styles
   }
 
   #education-img {
-    height: 120px;
+    height: 100px;
     width: 100%;
     padding: 15% 0;
   }
@@ -730,7 +730,7 @@ Media Queries Styles
     padding-bottom: 40px;
     border-top: thick solid #7F952D;
     transition: 0.2s all ease-out;
-    margin: 0 2% 0 2%;
+    margin: 0 35px;
   }
 
   #box-cat {
@@ -739,7 +739,7 @@ Media Queries Styles
     padding-bottom: 40px;
     border-top: thick solid #F0A021;
     transition: 0.2s all ease-out;
-    margin: 0 2% 50px 2%;
+    margin: 0 35px 50px 35px;
   }
 
   .experience-text-order {
@@ -950,7 +950,7 @@ Media Queries Styles
   }
 
   #education-img {
-    height: 200px;
+    height: 125px;
     width: 100%;
     padding: 15% 0;
   }
@@ -961,7 +961,7 @@ Media Queries Styles
     padding-bottom: 40px;
     border-top: thick solid #7F952D;
     transition: 0.2s all ease-out;
-    margin: 0 2% 0 2%;
+    margin: 0 45px;
   }
 
   #box-cat {
@@ -970,7 +970,7 @@ Media Queries Styles
     padding-bottom: 40px;
     border-top: thick solid #F0A021;
     transition: 0.2s all ease-out;
-    margin: 0 2% 75px 2%;
+    margin: 0 45px 75px 45px;
   }
 
   .experience-text-order {
@@ -1136,9 +1136,27 @@ Media Queries Styles
   }
 
   #education-img {
-    height: 135px;
+    height: 115px;
     width: 100%;
     padding: 15% 0;
+  }
+
+  #box-dragon {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 25px;
+    border-top: thick solid #7F952D;
+    transition: 0.2s all ease-out;
+    margin: 0 25px;
+  }
+
+  #box-cat {
+    background-color: white;
+    text-align: center;
+    padding-bottom: 25px;
+    border-top: thick solid #F0A021;
+    transition: 0.2s all ease-out;
+    margin: 0 25px;
   }
 
   .slide-in-left {
