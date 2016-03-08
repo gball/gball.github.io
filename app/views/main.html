@@ -20,7 +20,7 @@
   	  <a href="#/" nav-click scroll-to="section-passion" ng-class="{true:'active'}[isActive == 5]">passion</a>
 		</li>
 		<li>
-  	  <a href="#/" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 6]">abilities</a>
+  	  <a href="#/" nav-click scroll-to="section-abilities" ng-class="{true:'active'}[isActive == 6]">abilities</a>
 		</li>
 		<li>
   	  <a href="#/" nav-click scroll-to="header-image" ng-class="{true:'active'}[isActive == 7]">contact</a>
@@ -186,6 +186,25 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Abilities section -->
+<div id="section-abilities">
+	<div class="container">
+		<h1>
+			Abilities
+		</h1>
+		<h2>
+			{{quotes[4].quote}}
+		</h2>
+		<hr>
+		<div class="graph-row">
+			<div ng-repeat="data in graphData" class="col-4">
+				<div class="graphs">
+			  		<pie-chart data="data" options="options"></pie-chart>
+			  	</div>
 			</div>
 		</div>
 	</div>

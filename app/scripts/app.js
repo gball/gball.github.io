@@ -12,7 +12,8 @@ angular
   .module('gballgithubioApp', [
     'ngResource',
     'ngRoute',
-    'smoothScroll'
+    'smoothScroll',
+    'n3-pie-chart'
   ])
   .config(function ($routeProvider) {
     $routeProvider

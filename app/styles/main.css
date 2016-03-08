@@ -518,6 +518,35 @@ Passion Section Styles
 
 /***************************
 ****************************
+Abilities Section Styles
+****************************
+***************************/
+
+#section-abilities {
+  background-color: #35404F;
+  display: inline-block;
+  width: 100%;
+}
+
+.col-4 {
+  width: 25%; 
+}
+
+.graphs {
+  width: 175px;
+  height: 175px;
+  margin: 100px auto auto auto;
+}
+
+.graph-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+/***************************
+****************************
 Media Queries Styles
 ****************************
 ***************************/
@@ -747,6 +776,23 @@ Media Queries Styles
     text-align: center; 
     padding: 5% 2%;
   }
+
+  .graphs {
+    width: 125px;
+    height: 125px;
+    margin: 100px auto auto auto;
+  }
+
+  .col-4 {
+    width: 50%;
+  }
+
+  .graph-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 700px) {
@@ -954,6 +1000,19 @@ Media Queries Styles
     text-align: center; 
     padding: 5% 2%;
   }
+
+  .graphs {
+    width: 115px;
+    height: 115px;
+    margin: 100px auto auto auto;
+  }
+
+  .graph-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 985px) {
@@ -1103,5 +1162,11 @@ Media Queries Styles
   .passion-info-text {
     text-align: center; 
     padding: 0 35px;
+  }
+
+  .graphs {
+    width: 150px;
+    height: 150px;
+    margin: 100px auto auto auto;
   }
 }

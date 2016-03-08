@@ -2,7 +2,7 @@
 
 angular.module('gballgithubioApp')
   .controller('MainCtrl', ['$scope',
-  												 'aboutMe',
+						   'aboutMe',
                            'education',
                            'experience',
                            'skills',
@@ -21,11 +21,15 @@ angular.module('gballgithubioApp')
 	  $scope.aboutMe = aboutMe.aboutMe;
 	  $scope.experience = experience.experience;
 	  $scope.education = education.education;
-	  $scope.skills = skills.skills;
-	  $scope.tools = tools.tools;
 	  $scope.passion = passion.passion;
 	  $scope.quotes = quotes.quotes;
 	  $scope.passionLength = $scope.passion.length;
+		$scope.graphData = getData();
+		$scope.options = {
+			thickness: 4, 
+			mode: "gauge", 
+			total: 100
+		};
 
 	  // some jquery for arrow down and navigation animation
 	  $( "#navbar" ).hide();
@@ -55,4 +59,29 @@ angular.module('gballgithubioApp')
 	  	
 	  	return age;
 	  };
+
+	  // format data receieved from db for graph library
+	  function getData() {
+			var tmpData = [];
+
+			for (var i = 0; i < skills.skills.length; i++) {
+				tmpData.push([{
+					label: skills.skills[i].name, 
+					value: skills.skills[i].strength, 
+					color: "grey", 
+					colorComplement: "white"
+				}]);
+			}
+
+			for (var j = 0; j < tools.tools.length; j++) {
+				tmpData.push([{
+					label: tools.tools[j].name, 
+					value: tools.tools[j].strength, 
+					color: "grey", 
+					colorComplement: "white"
+				}]);
+			}
+
+			return tmpData;
+	  }
   }]);
