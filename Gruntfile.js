@@ -473,7 +473,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:gball/gball.github.io.git',
+          remote: 'https://github.com/gball/gball.github.io.git',
           branch: 'gh-pages'
         }
       },
