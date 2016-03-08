@@ -26,7 +26,7 @@ angular.module('gballgithubioApp')
         var educationBottom = document.getElementById('section-education').offsetHeight - 10 + aboutBottom;
         var experienceBottom = document.getElementById('section-experience').offsetHeight - 10 + educationBottom;
         var passionBottom = document.getElementById('section-passion').offsetHeight - 10 + experienceBottom;
-        var abilitiesBottom = document.getElementById('section-abilities').offsetHeight - 10 + passionBottom;
+        var abilitiesBottom = document.getElementById('section-abilities').offsetHeight + passionBottom - document.documentElement.clientHeight;
 
         if (headerTop <= scope.scrollPosition && scope.scrollPosition < headerBottom) {
           scope.isActive = 1;
@@ -40,6 +40,8 @@ angular.module('gballgithubioApp')
           scope.isActive = 5;
         } else if (passionBottom <= scope.scrollPosition && scope.scrollPosition < abilitiesBottom) {
           scope.isActive = 6;
+        } else if (abilitiesBottom <= scope.scrollPosition) {
+          scope.isActive = 7;
         } 
 
         scope.scrollPosition = this.pageYOffset;

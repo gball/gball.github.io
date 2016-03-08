@@ -547,6 +547,32 @@ Abilities Section Styles
 
 /***************************
 ****************************
+Abilities Section Styles
+****************************
+***************************/
+
+#section-contact {
+  background-color: #1D1D1D;
+  display: inline-block;
+  width: 100%;
+}
+
+.contact-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.contact-icon {
+  height: 125px;
+  width: 125px;
+  display: block;
+  margin: auto;
+}
+
+/***************************
+****************************
 Media Queries Styles
 ****************************
 ***************************/
@@ -793,6 +819,13 @@ Media Queries Styles
     flex-wrap: wrap;
     margin-bottom: 50px;
   }
+
+  .contact-icon {
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 700px) {
@@ -1013,6 +1046,13 @@ Media Queries Styles
     flex-wrap: wrap;
     margin-bottom: 75px;
   }
+
+  .contact-icon {
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 985px) {
@@ -1168,5 +1208,12 @@ Media Queries Styles
     width: 150px;
     height: 150px;
     margin: 100px auto auto auto;
+  }
+
+  .contact-icon {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: auto;
   }
 }
