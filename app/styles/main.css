@@ -374,8 +374,9 @@ Experience Section Styles
 
 #section-experience {
   background-color: #7ACCC8;
-  display: inline-block;
   width: 100%;
+  display: block;
+  overflow: hidden;
 }
 
 .text-experience {
