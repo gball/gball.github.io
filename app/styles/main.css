@@ -193,49 +193,49 @@ Header Tags Styles
 
 @-webkit-keyframes bounce {
   0%   {
-    margin-top: -20px;
+    margin-top: 20px;
   }
   50%  {
     margin-top: 0px;
   }
   100% {
-    margin-top: -20px;
+    margin-top: 20px;
   }
 }
 
 @-moz-keyframes bounce {
   0% {
-    margin-top: -20px;
+    margin-top: 20px;
   }
   50% {
     margin-top: 0px;
   }
   100% {
-    margin-top: -20px;
+    margin-top: 20px;
   }
 }
 
 @-o-keyframes bounce {
   0% {
-    margin-top: -20px;
+    margin-top: 20px;
   }
   50% {
     margin-top: 0px;
   }
   100% {
-    margin-top: -20px;
+    margin-top: 20px;
   }
 }
 
 @keyframes bounce {
   0% {
-    margin-top: -20px;
+    margin-top: 20px;
   }
   50% {
     margin-top: 0px;
   }
   100% {
-    margin-top: -20px;
+    margin-top: 20px;
   }
 }
 
