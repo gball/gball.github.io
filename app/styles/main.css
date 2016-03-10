@@ -87,6 +87,7 @@ h2 {
 ul {
   list-style-type: none;
   overflow: hidden;
+  display: -webkit-flex;
   display: flex;
   margin-right: 35px;
 }
@@ -126,7 +127,9 @@ CSS general classes Styles
 
 .row {
   width: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 100px 0;
 }
@@ -189,24 +192,51 @@ Header Tags Styles
 }
 
 @-webkit-keyframes bounce {
-    0%   {margin-top: -20px;}
-    50%  {margin-top: 0px}
-    100% {margin-top: -20px;}
+  0%   {
+    margin-top: -20px;
+  }
+  50%  {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -20px;
+  }
 }
+
 @-moz-keyframes bounce {
-    0%   {margin-top: -20px;}
-    50%  {margin-top: 0px}
-    100% {margin-top: -20px;}
+  0% {
+    margin-top: -20px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -20px;
+  }
 }
+
 @-o-keyframes bounce {
-    0%   {margin-top: -20px;}
-    50%  {margin-top: 0px}
-    100% {margin-top: -20px;}
+  0% {
+    margin-top: -20px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -20px;
+  }
 }
+
 @keyframes bounce {
-    0%   {margin-top: 20px;}
-    50%  {margin-top: 0px}
-    100% {margin-top: 20px;}
+  0% {
+    margin-top: -20px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -20px;
+  }
 }
 
 #header-image {
@@ -296,10 +326,16 @@ Education Section Styles
   text-align: center;
   padding-bottom: 40px;
   border-top: thick solid #7F952D;
+  -webkit-transition: 0.2s all ease-out;
+  -moz-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
 }
 
 #box-dragon:hover {
+  -webkit-transform: scale(1.01, 1.01) translateY(-10px);
+  -moz-transform: scale(1.01, 1.01) translateY(-10px);
+  -o-transform: scale(1.01, 1.01) translateY(-10px);
   transform: scale(1.01, 1.01) translateY(-10px);
   box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.5);
   color: black;
@@ -311,10 +347,16 @@ Education Section Styles
   text-align: center;
   padding-bottom: 40px;
   border-top: thick solid #F0A021;
+  -webkit-transition: 0.2s all ease-out;
+  -moz-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
   transition: 0.2s all ease-out;
 }
 
 #box-cat:hover {
+  -webkit-transform: scale(1.01, 1.01) translateY(-10px);
+  -moz-transform: scale(1.01, 1.01) translateY(-10px);
+  -o-transform: scale(1.01, 1.01) translateY(-10px);
   transform: scale(1.01, 1.01) translateY(-10px);
   box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.5);
   color: black;
@@ -355,11 +397,46 @@ Experience Section Styles
 }
 
 .slide-in-left {
-  animation-duration: 2s;
-  animation-name: slideinleft;
+  -webkit-animation: 2s slideinleft;
+  -moz-animation: 2s slideinleft;
+  -o-animation: 2s slideinleft;
+  animation: 2s slideinleft;
   width: 100%;
   height: 400px;
   margin-left: 0%;
+}
+
+@-webkit-keyframes slideinleft {
+  0% {
+    margin-left: -150%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes slideinleft {
+  0% {
+    margin-left: -150%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes slideinleft {
+  0% {
+    margin-left: -150%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 
 @keyframes slideinleft {
@@ -379,11 +456,46 @@ Experience Section Styles
 }
 
 .slide-in-right {
-  animation-duration: 2s;
-  animation-name: slideinright;
+  -webkit-animation: 2s slideinright;
+  -moz-animation: 2s slideinright;
+  -o-animation: 2s slideinright;
+  animation: 2s slideinright;
   margin-left: 0%;
   width: 100%;
   height: 400px;
+}
+
+@-webkit-keyframes slideinright {
+  0% {
+    margin-left: 150%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes slideinright {
+  0% {
+    margin-left: 150%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes slideinright {
+  0% {
+    margin-left: 150%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 
 @keyframes slideinright {
@@ -426,6 +538,9 @@ Passion Section Styles
 }
 
 .unfixed-heart {
+  -webkit-animation: beat 500ms alternate infinite;
+  -moz-animation: beat 500ms alternate infinite;
+  -o-animation: beat 500ms alternate infinite;
   animation: beat 500ms alternate infinite;
   height: 400px;
   width: 400px;
@@ -443,12 +558,33 @@ Passion Section Styles
 }
 
 .fixed-heart {
+  -webkit-animation: beat 500ms alternate infinite;
+  -moz-animation: beat 500ms alternate infinite;
+  -o-animation: beat 500ms alternate infinite;
   animation: beat 500ms alternate infinite;
   height: 400px;
   width: 400px;
   top: 25%;
   position: fixed;
   right: 8%;
+}
+
+@-webkit-keyframes beat {
+  to {
+    -webkit-transform: scale(.95);
+  }
+}
+
+@-moz-keyframes beat {
+  to {
+    -moz-transform: scale(.95);
+  }
+}
+
+@-o-keyframes beat {
+  to {
+    -o-transform: scale(.95);
+  }
 }
 
 @keyframes beat {
@@ -458,10 +594,16 @@ Passion Section Styles
 }
 
 .passion-order-image {
+  -webkit-order: 2;
+  -moz-order: 2;
+  -o-order: 2;
   order: 2;
 }
 
 .passion-order-text {
+  -webkit-order: 1;
+  -moz-order: 1;
+  -o-order: 1;
   order: 1;
 }
 
@@ -540,7 +682,9 @@ Abilities Section Styles
 
 .graph-row {
   width: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: 100px;
 }
@@ -559,7 +703,9 @@ Abilities Section Styles
 
 .contact-row {
   width: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 50px 0;
 }
@@ -729,6 +875,9 @@ Media Queries Styles
     text-align: center;
     padding-bottom: 40px;
     border-top: thick solid #7F952D;
+    -webkit-transition: 0.2s all ease-out;
+    -moz-transition: 0.2s all ease-out;
+    -o-transition: 0.2s all ease-out;
     transition: 0.2s all ease-out;
     margin: 0 35px;
   }
@@ -738,31 +887,49 @@ Media Queries Styles
     text-align: center;
     padding-bottom: 40px;
     border-top: thick solid #F0A021;
+    -webkit-transition: 0.2s all ease-out;
+    -moz-transition: 0.2s all ease-out;
+    -o-transition: 0.2s all ease-out;
     transition: 0.2s all ease-out;
     margin: 0 35px 50px 35px;
   }
 
   #box-dragon:hover {
+    -webkit-transform: scale(1, 1) translateY(0);
+    -moz-transform: scale(1, 1) translateY(0);
+    -o-transform: scale(1, 1) translateY(0);
     transform: scale(1, 1) translateY(0);
     box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.5);
     color: black;
   }
 
   #box-cat:hover {
+    -webkit-transform: scale(1, 1) translateY(0);
+    -moz-transform: scale(1, 1) translateY(0);
+    -o-transform: scale(1, 1) translateY(0);
     transform: scale(1, 1) translateY(0);
     box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.5);
     color: black;
   }
 
   .experience-text-order {
+    -webkit-order: 2;
+    -moz-order: 2;
+    -o-order: 2;
     order: 2;
   }
 
   .experience-img-order {
+    -webkit-order: 1;
+    -moz-order: 1;
+    -o-order: 1;
     order: 1;
   }
 
   .slide-in-right {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
     animation: none;
     width: 98%;
     height: 250px;
@@ -770,6 +937,9 @@ Media Queries Styles
   }
 
   .slide-in-left {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
     animation: none;
     width: 98%;
     height: 250px;
@@ -795,16 +965,24 @@ Media Queries Styles
 
   .row {
     width: 100%;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 50px 0;
   }
 
   .passion-order-image {
+    -webkit-order: 1;
+    -moz-order: 1;
+    -o-order: 1;
     order: 1;
   }
 
   .passion-order-text {
+    -webkit-order: 2;
+    -moz-order: 2;
+    -o-order: 2;
     order: 2;
   }
 
@@ -834,7 +1012,9 @@ Media Queries Styles
 
   .graph-row {
     width: 100%;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 50px;
   }
@@ -979,6 +1159,9 @@ Media Queries Styles
     text-align: center;
     padding-bottom: 40px;
     border-top: thick solid #7F952D;
+    -webkit-transition: 0.2s all ease-out;
+    -moz-transition: 0.2s all ease-out;
+    -o-transition: 0.2s all ease-out;
     transition: 0.2s all ease-out;
     margin: 0 45px;
   }
@@ -988,29 +1171,42 @@ Media Queries Styles
     text-align: center;
     padding-bottom: 40px;
     border-top: thick solid #F0A021;
+    -webkit-transition: 0.2s all ease-out;
+    -moz-transition: 0.2s all ease-out;
+    -o-transition: 0.2s all ease-out;
     transition: 0.2s all ease-out;
     margin: 0 45px 75px 45px;
   }
 
   .experience-text-order {
+    -webkit-order: 2;
+    -moz-order: 2;
+    -o-order: 2;
     order: 2;
   }
 
   .experience-img-order {
+    -webkit-order: 1;
+    -moz-order: 1;
+    -o-order: 1;
     order: 1;
   }
 
   .slide-in-right {
-    animation-duration: 2s;
-    animation-name: slideinright;
+    -webkit-animation: 2s slideinright;
+    -moz-animation: 2s slideinright;
+    -o-animation: 2s slideinright;
+    animation: 2s slideinright;
     width: 98%;
     height: 300px;
     margin-left: 0%;
   }
 
   .slide-in-left {
-    animation-duration: 2s;
-    animation-name: slideinleft;
+    -webkit-animation: 2s slideinleft;
+    -moz-animation: 2s slideinleft;
+    -o-animation: 2s slideinleft;
+    animation: 2s slideinleft;
     width: 98%;
     height: 300px;
     margin-left: 0%;
@@ -1026,16 +1222,24 @@ Media Queries Styles
 
   .row {
     width: 100%;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 75px 0;
   }
 
   .passion-order-image {
+    -webkit-order: 1;
+    -moz-order: 1;
+    -o-order: 1;
     order: 1;
   }
 
   .passion-order-text {
+    -webkit-order: 2;
+    -moz-order: 2;
+    -o-order: 2;
     order: 2;
   }
 
@@ -1061,7 +1265,9 @@ Media Queries Styles
 
   .graph-row {
     width: 100%;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 75px;
   }
@@ -1165,6 +1371,9 @@ Media Queries Styles
     text-align: center;
     padding-bottom: 25px;
     border-top: thick solid #7F952D;
+    -webkit-transition: 0.2s all ease-out;
+    -moz-transition: 0.2s all ease-out;
+    -o-transition: 0.2s all ease-out;
     transition: 0.2s all ease-out;
     margin: 0 25px;
   }
@@ -1174,21 +1383,28 @@ Media Queries Styles
     text-align: center;
     padding-bottom: 25px;
     border-top: thick solid #F0A021;
+    -webkit-transition: 0.2s all ease-out;
+    -moz-transition: 0.2s all ease-out;
+    -o-transition: 0.2s all ease-out;
     transition: 0.2s all ease-out;
     margin: 0 25px;
   }
 
   .slide-in-left {
-    animation-duration: 2s;
-    animation-name: slideinleft;
+    -webkit-animation: 2s slideinleft;
+    -moz-animation: 2s slideinleft;
+    -o-animation: 2s slideinleft;
+    animation: 2s slideinleft;
     width: 100%;
     height: 350px;
     margin-left: 0%;
   }
 
   .slide-in-right {
-    animation-duration: 2s;
-    animation-name: slideinright;
+    -webkit-animation: 2s slideinright;
+    -moz-animation: 2s slideinright;
+    -o-animation: 2s slideinright;
+    animation: 2s slideinright;
     width: 100%;
     height: 350px;
     margin-left: 0%;
@@ -1208,6 +1424,9 @@ Media Queries Styles
   }
 
   .fixed-heart {
+    -webkit-animation: beat 500ms alternate infinite;
+    -moz-animation: beat 500ms alternate infinite;
+    -o-animation: beat 500ms alternate infinite;
     animation: beat 500ms alternate infinite;
     height: 350px;
     width: 325px;
@@ -1225,6 +1444,9 @@ Media Queries Styles
   }
 
   .unfixed-heart {
+    -webkit-animation: beat 500ms alternate infinite;
+    -moz-animation: beat 500ms alternate infinite;
+    -o-animation: beat 500ms alternate infinite;
     animation: beat 500ms alternate infinite;
     height: 350px;
     width: 325px;
