@@ -742,6 +742,18 @@ Media Queries Styles
     margin: 0 35px 50px 35px;
   }
 
+  #box-dragon:hover {
+    transform: scale(1, 1) translateY(0);
+    box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.5);
+    color: black;
+  }
+
+  #box-cat:hover {
+    transform: scale(1, 1) translateY(0);
+    box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.5);
+    color: black;
+  }
+
   .experience-text-order {
     order: 2;
   }
@@ -751,19 +763,26 @@ Media Queries Styles
   }
 
   .slide-in-right {
-    animation-duration: 2s;
-    animation-name: slideinright;
+    animation: none;
     width: 98%;
     height: 250px;
     margin-left: 0%;
   }
 
   .slide-in-left {
-    animation-duration: 2s;
-    animation-name: slideinleft;
+    animation: none;
     width: 98%;
     height: 250px;
     margin-left: 0%;
+  }
+
+  .img-experience-right {
+    width: 98%;
+    height: 250px;
+  }
+  .img-experience-left {
+    width: 98%;
+    height: 250px;
   }
 
   .img-height {
