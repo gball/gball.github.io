@@ -5,6 +5,11 @@ angular.module('gballgithubioApp')
   .directive("slideInAnimation", ['$window', function ($window) {
     function link (scope, element) {
       angular.element($window).bind("scroll resize", function() {
+        // no animation for mobile view 
+        if (document.documentElement.clientWidth <= 500) {
+          return;
+        }
+
         var height = window.innerHeight;
         var currentElement = element.find("img");
         
