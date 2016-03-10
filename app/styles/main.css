@@ -259,7 +259,8 @@ Header Tags Styles
   padding: 18vh 0 2vh 0;
   text-align: center;
   border-bottom: 1px solid white;
-  margin: 0 30% 1vh 30%; 
+  margin: auto;
+  display: table; 
 }
 
 #header-image h3 {
@@ -830,7 +831,8 @@ Media Queries Styles
     padding: 18vh 0 2vh 0;
     text-align: center;
     border-bottom: 1px solid white;
-    margin: 0 30% 1vh 30%; 
+    margin: auto;
+    display: table; 
   }
 
   #header-image h3 {
@@ -1114,7 +1116,8 @@ Media Queries Styles
     padding: 18vh 0 2vh 0;
     text-align: center;
     border-bottom: 1px solid white;
-    margin: 0 30% 1vh 30%;
+    margin: auto;
+    display: table;
   }
 
   #header-image h3 {
@@ -1330,7 +1333,8 @@ Media Queries Styles
     padding: 18vh 0 2vh 0;
     text-align: center;
     border-bottom: 1px solid white;
-    margin: 0 30% 1vh 30%;
+    margin: auto;
+    display: table;
   }
 
   #header-image h3 {
