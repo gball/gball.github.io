@@ -5,7 +5,7 @@
 
 module.exports = function(config) {
   'use strict';
-
+    
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
@@ -27,17 +27,34 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js',
+      'bower_components/d3/d3.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
-      "app/scripts/**/*.js",
-      "test/mock/**/*.js",
-      "test/spec/**/*.js"
+      'app/scripts/**/*.js',
+      'test/spec/**/*.js'
     ],
+
+    // coverage reporter generates the coverage
+    reporters: ['progress', 'coverage'],
+
+    preprocessors: {
+      // source files, that you wanna generate coverage for
+      // do not include tests or libraries
+      // (these files will be instrumented by Istanbul)
+      'app/scripts/**/*.js': ['coverage']
+    },
+
+    // optionally, configure the reporter
+    coverageReporter: {
+      type : 'html',
+      dir : 'test/coverage/'
+    },
 
     // list of files / patterns to exclude
     exclude: [
     ],
 
+    
     // web server port
     port: 8080,
 
@@ -56,7 +73,10 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       "karma-phantomjs-launcher",
-      "karma-jasmine"
+      "karma-jasmine",
+      'karma-coverage',
+      'karma-chrome-launcher',
+      'karma-firefox-launcher'
     ],
 
     // Continuous Integration mode
