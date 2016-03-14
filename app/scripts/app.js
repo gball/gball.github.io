@@ -33,7 +33,7 @@ angular
               if (err) {
                 return $q.reject(err);
               }
-              defer.resolve(response);
+              defer.resolve(response.aboutMe);
             });
 
             return defer.promise;
@@ -45,7 +45,7 @@ angular
               if (err) {
                 return $q.reject(err);
               }
-              defer.resolve(response);
+              defer.resolve(response.education);
             });
             
             return defer.promise;
@@ -57,7 +57,7 @@ angular
               if (err) {
                 return $q.reject(err);
               }
-              defer.resolve(response);
+              defer.resolve(response.experience);
             });
             
             return defer.promise;
@@ -69,19 +69,21 @@ angular
               if (err) {
                 return $q.reject(err);
               }
-              defer.resolve(response);
-            });
-            
-            return defer.promise;
-          }],
-          tools: ['$q', 'dataFactory', function ($q, dataFactory) {
-            var defer = $q.defer();
 
-            dataFactory.getTools( function (err, response) {
-              if (err) {
-                return $q.reject(err);
+              var skills = response.skills;
+              var tmpSkillsData = []; 
+
+              // format data to be used by n3 graph lib
+              for (var i = 0; i < skills.length; i++) {
+                tmpSkillsData.push([{
+                  label: skills[i].name, 
+                  value: skills[i].strength, 
+                  color: "grey", 
+                  colorComplement: "white"
+                }]);
               }
-              defer.resolve(response);
+
+              defer.resolve(tmpSkillsData);
             });
             
             return defer.promise;
@@ -93,7 +95,7 @@ angular
               if (err) {
                 return $q.reject(err);
               }
-              defer.resolve(response);
+              defer.resolve(response.passion);
             });
             
             return defer.promise;
@@ -105,7 +107,7 @@ angular
               if (err) {
                 return $q.reject(err);
               }
-              defer.resolve(response);
+              defer.resolve(response.quotes);
             });
             
             return defer.promise;

@@ -71,7 +71,7 @@ angular.module('gballgithubioApp')
             element.removeClass("fixed-heart hide-heart");
         } else if ((totalSectionHeight - 600) <= scope.scrollPosition) {
             // adjust heart image to fix at bottom of passion section when scrolling down
-            var heartTopMargin = document.getElementsByClassName("passion-order-image")[scope.passionLength-1].offsetTop-document.getElementById("col-offset").offsetTop;
+            var heartTopMargin = document.getElementsByClassName("passion-order-image")[scope.passion.length-1].offsetTop-document.getElementById("col-offset").offsetTop;
             angular.element(".unfixed-heart").css("margin-top", heartTopMargin + "px");
             element.addClass("unfixed-heart");
             element.removeClass("fixed-heart hide-heart");

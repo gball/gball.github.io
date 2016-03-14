@@ -112,35 +112,8 @@ angular.module('gballgithubioApp')
         });
     };
 
-    var getTools = function (cb) {
-      $http.get('https://spreadsheets.google.com/feeds/list/1Shh-V6ypqU7hFQCJxsg9CN5rnWN0d0t6VwviRiHCoe8/5/public/values?alt=json')
-        .success(function (response) {
-          var length = response.feed.entry.length;
-          var tmpResponse = [];
-
-          for (var i = 0; i < length; i++) {
-            var content = response.feed.entry[i];
-            var obj = {
-              name: content.gsx$name.$t,
-              strength: Number(content.gsx$strength.$t)
-            };
-
-            tmpResponse.push(obj);
-          }
-
-          response = {
-            tools: tmpResponse
-          };
-
-          cb(undefined, response);
-        })
-        .error(function (err) {
-          cb(err);
-        });
-    };
-
     var getPassion = function (cb) {
-      $http.get('https://spreadsheets.google.com/feeds/list/1Shh-V6ypqU7hFQCJxsg9CN5rnWN0d0t6VwviRiHCoe8/6/public/values?alt=json')
+      $http.get('https://spreadsheets.google.com/feeds/list/1Shh-V6ypqU7hFQCJxsg9CN5rnWN0d0t6VwviRiHCoe8/5/public/values?alt=json')
         .success(function (response) {
           var length = response.feed.entry.length;
           var tmpResponse = [];
@@ -168,7 +141,7 @@ angular.module('gballgithubioApp')
     };
 
     var getQuotes = function (cb) {
-      $http.get('https://spreadsheets.google.com/feeds/list/1Shh-V6ypqU7hFQCJxsg9CN5rnWN0d0t6VwviRiHCoe8/7/public/values?alt=json')
+      $http.get('https://spreadsheets.google.com/feeds/list/1Shh-V6ypqU7hFQCJxsg9CN5rnWN0d0t6VwviRiHCoe8/6/public/values?alt=json')
         .success(function (response) {
           var length = response.feed.entry.length;
           var tmpResponse = [];
@@ -199,7 +172,6 @@ angular.module('gballgithubioApp')
       getEducation: getEducation,
       getExperience: getExperience,
       getSkills: getSkills,
-      getTools: getTools,
       getPassion: getPassion,
       getQuotes: getQuotes
     };
