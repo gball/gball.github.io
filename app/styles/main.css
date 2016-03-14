@@ -154,6 +154,22 @@ Navigation Styles
   z-index: 998;
 }
 
+.navbar-hide {
+  top: -100%;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.navbar-show {
+  top: 0%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 #menu-icon {
   position: fixed; 
   left: 94vw; 
@@ -178,6 +194,22 @@ Header Tags Styles
   height: 60px;
   left: 50%;
   margin-left: -40px;
+}
+
+.fade-in {
+  opacity: 1.0;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.fade-out {
+  opacity: 0.0;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 #arrow {

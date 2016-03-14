@@ -1,6 +1,49 @@
 'use strict';
 
 angular.module('gballgithubioApp')
+  // when menu icon is clicked, the navbar slide down or up
+  .directive('menuClick', function () {      
+    function link () {
+      angular.element(document.querySelector('#menu-icon')).bind("click", function() {
+        if (angular.element(document.querySelector('#navbar')).hasClass("navbar-show")) {
+          angular.element(document.querySelector('#navbar')).removeClass("navbar-show");
+          angular.element(document.querySelector('#navbar')).addClass("navbar-hide");
+        } else if (angular.element(document.querySelector('#navbar')).hasClass("navbar-hide")) {
+          angular.element(document.querySelector('#navbar')).removeClass("navbar-hide");
+          angular.element(document.querySelector('#navbar')).addClass("navbar-show");
+        }
+      });     
+    }
+
+    return {
+      restrict: 'A',
+      link: link
+    };
+  })
+
+  // arrow fades in and out as you scroll down or up 
+  .directive('arrowScroll', ['$window', function ($window) {      
+    function link (scope, element) {
+      angular.element($window).bind("scroll resize", function() {
+        if (scope.scrollPosition > 100) {
+          angular.element(document.querySelector('#arrow')).removeClass("fade-in");
+          angular.element(document.querySelector('#arrow')).addClass("fade-out");
+        } else if (scope.scrollPosition <= 100) {
+          angular.element(document.querySelector('#arrow')).removeClass("fade-out");
+          angular.element(document.querySelector('#arrow')).addClass("fade-in");
+        }
+
+        scope.scrollPosition = this.pageYOffset;
+        scope.$apply();
+      });     
+    }
+
+    return {
+      restrict: 'A',
+      link: link
+    };
+  }])
+  
   // on scroll, updates the nav links state depending on current height of page
   .directive("navScrollUpdate", ['$window', function ($window) {
     function link (scope) {
