@@ -1,21 +1,6 @@
 'use strict';
 
 angular.module('gballgithubioApp')
-  // once nav item is clicked, changes from inactive to active state
-  .directive('navClick', function () {      
-    function link (element) {
-      angular.element.bind("click", function() {
-        element.parent().parent().find("a").removeClass("active");
-        element.addClass("active");
-      });     
-    }
-
-    return {
-      restrict: 'A',
-      link: link
-    };
-  })
-
   // on scroll, updates the nav links state depending on current height of page
   .directive("navScrollUpdate", ['$window', function ($window) {
     function link (scope) {
