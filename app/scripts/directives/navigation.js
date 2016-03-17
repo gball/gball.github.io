@@ -3,8 +3,8 @@
 angular.module('gballgithubioApp')
   // when menu icon is clicked, the navbar slide down or up
   .directive('menuClick', function () {      
-    function link () {
-      angular.element(document.querySelector('#menu-icon')).bind("click", function() {
+    function link (scope, element) {
+      element.bind("click", function() {
         if (angular.element(document.querySelector('#navbar')).hasClass("navbar-show")) {
           angular.element(document.querySelector('#navbar')).removeClass("navbar-show");
           angular.element(document.querySelector('#navbar')).addClass("navbar-hide");
@@ -12,7 +12,7 @@ angular.module('gballgithubioApp')
           angular.element(document.querySelector('#navbar')).removeClass("navbar-hide");
           angular.element(document.querySelector('#navbar')).addClass("navbar-show");
         }
-      });     
+      });   
     }
 
     return {
@@ -23,7 +23,7 @@ angular.module('gballgithubioApp')
 
   // arrow fades in and out as you scroll down or up 
   .directive('arrowScroll', ['$window', function ($window) {      
-    function link (scope, element) {
+    function link (scope) {
       angular.element($window).bind("scroll resize", function() {
         if (scope.scrollPosition > 100) {
           angular.element(document.querySelector('#arrow')).removeClass("fade-in");
@@ -54,8 +54,14 @@ angular.module('gballgithubioApp')
         var educationBottom = document.getElementById('section-education').offsetHeight - 10 + aboutBottom;
         var experienceBottom = document.getElementById('section-experience').offsetHeight - 10 + educationBottom;
         var passionBottom = document.getElementById('section-passion').offsetHeight - 10 + experienceBottom;
-        var abilitiesBottom = document.getElementById('section-abilities').offsetHeight + passionBottom - document.documentElement.clientHeight;
-
+        var abilitiesBottom = document.getElementById('section-abilities').offsetHeight + passionBottom;
+        
+        // if scroll doesnt reach the last section than adjust when to make active
+        if(window.innerHeight > document.getElementById('section-contact').offsetHeight) {
+          abilitiesBottom -= window.innerHeight;
+        }        
+        
+        // determine where scroll position is in order to set appropriate nav item active
         if (headerTop <= scope.scrollPosition && scope.scrollPosition < headerBottom) {
           scope.isActive = 1;
         } else if (headerBottom <= scope.scrollPosition && scope.scrollPosition < aboutBottom) {
