@@ -4,13 +4,13 @@ angular.module('gballgithubioApp')
   // when menu icon is clicked, the navbar slide down or up
   .directive('menuClick', function () {      
     function link (scope, element) {
-      element.bind("click", function() {
-        if (angular.element(document.querySelector('#navbar')).hasClass("navbar-show")) {
-          angular.element(document.querySelector('#navbar')).removeClass("navbar-show");
-          angular.element(document.querySelector('#navbar')).addClass("navbar-hide");
-        } else if (angular.element(document.querySelector('#navbar')).hasClass("navbar-hide")) {
-          angular.element(document.querySelector('#navbar')).removeClass("navbar-hide");
-          angular.element(document.querySelector('#navbar')).addClass("navbar-show");
+      element.bind('click', function() {
+        if (angular.element(document.querySelector('#navbar')).hasClass('navbar-show')) {
+          angular.element(document.querySelector('#navbar')).removeClass('navbar-show');
+          angular.element(document.querySelector('#navbar')).addClass('navbar-hide');
+        } else if (angular.element(document.querySelector('#navbar')).hasClass('navbar-hide')) {
+          angular.element(document.querySelector('#navbar')).removeClass('navbar-hide');
+          angular.element(document.querySelector('#navbar')).addClass('navbar-show');
         }
       });   
     }
@@ -24,13 +24,13 @@ angular.module('gballgithubioApp')
   // arrow fades in and out as you scroll down or up 
   .directive('arrowScroll', ['$window', function ($window) {      
     function link (scope) {
-      angular.element($window).bind("scroll resize", function() {
+      angular.element($window).bind('scroll resize', function() {
         if (scope.scrollPosition > 100) {
-          angular.element(document.querySelector('#arrow')).removeClass("fade-in");
-          angular.element(document.querySelector('#arrow')).addClass("fade-out");
+          angular.element(document.querySelector('#arrow')).removeClass('fade-in');
+          angular.element(document.querySelector('#arrow')).addClass('fade-out');
         } else if (scope.scrollPosition <= 100) {
-          angular.element(document.querySelector('#arrow')).removeClass("fade-out");
-          angular.element(document.querySelector('#arrow')).addClass("fade-in");
+          angular.element(document.querySelector('#arrow')).removeClass('fade-out');
+          angular.element(document.querySelector('#arrow')).addClass('fade-in');
         }
 
         scope.scrollPosition = this.pageYOffset;
@@ -45,9 +45,9 @@ angular.module('gballgithubioApp')
   }])
   
   // on scroll, updates the nav links state depending on current height of page
-  .directive("navScrollUpdate", ['$window', function ($window) {
+  .directive('navScrollUpdate', ['$window', function ($window) {
     function link (scope) {
-      angular.element($window).bind("scroll resize", function() {
+      angular.element($window).bind('scroll resize', function() {
         var headerTop = document.getElementById('header-image').offsetTop;
         var headerBottom = document.getElementById('header-image').offsetHeight - 10;
         var aboutBottom = document.getElementById('section-about').offsetHeight - 10 + headerBottom;

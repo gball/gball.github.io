@@ -78,8 +78,8 @@ angular
                 tmpSkillsData.push([{
                   label: skills[i].name, 
                   value: skills[i].strength, 
-                  color: "grey", 
-                  colorComplement: "white"
+                  color: 'grey', 
+                  colorComplement: 'white'
                 }]);
               }
 

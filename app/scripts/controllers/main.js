@@ -29,7 +29,7 @@ angular.module('gballgithubioApp')
 	  // variable for graph library configurations
 		$scope.options = {
 			thickness: 4, 
-			mode: "gauge", 
+			mode: 'gauge', 
 			total: 100
 		};
 		
