@@ -16,7 +16,7 @@ module.exports = function(config) {
     // testing framework to use (jasmine/mocha/qunit/...)
     // as well as any additional frameworks (requirejs/chai/sinon/...)
     frameworks: [
-      "jasmine"
+      'jasmine'
     ],
 
     // list of files / patterns to load in the browser
@@ -30,6 +30,7 @@ module.exports = function(config) {
       'bower_components/d3/d3.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
+      'bower_components/pie-chart/pie-chart.min.js',
       'app/scripts/**/*.js',
       'test/spec/**/*.js'
     ],
@@ -74,9 +75,7 @@ module.exports = function(config) {
     plugins: [
       "karma-phantomjs-launcher",
       "karma-jasmine",
-      'karma-coverage',
-      'karma-chrome-launcher',
-      'karma-firefox-launcher'
+      'karma-coverage'
     ],
 
     // Continuous Integration mode
