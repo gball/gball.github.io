@@ -1,6 +1,7 @@
 Gobind Singh Ball - Personal Website
 
 
+
 Description
 ___________
 
@@ -12,6 +13,8 @@ it is a small project, I tested it using Jasmine and Karma. Testing is important
 helped me clean code on this project! I got code coverage of 95%, and the results can be seen 
 under the test/coverage folder. If you have any questions or want to chat, please feel free to 
 contact me at gobindball32@gmail.com. Have a fantastic rest of your week! Happy coding! :D
+
+View the live website at http://robinball.tech
 
 
 Install
