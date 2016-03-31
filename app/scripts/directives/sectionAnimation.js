@@ -184,4 +184,52 @@ angular.module('gballgithubioApp')
       restrict: 'A',
       link: link
     };
+  }])
+  // graph animation occurs when graph appears near bottom of viewport 
+  .directive('graphAnimation', ['$window', function ($window) {
+    function link (scope, element) {
+      angular.element($window).bind('scroll resize', function() {
+        // no animation in mobile view
+        if (window.innerWidth <= 700) {
+          scope.options = {
+            animate: {
+              enabled: false
+            },
+            thickness: 4, 
+            mode: 'gauge', 
+            total: 100
+          };
+          return;
+        }
+
+        var browserHeight = window.innerHeight; 
+        var elementHeight = element.prop('offsetHeight');
+        var elementOffsetTop = element.prop('offsetTop');
+
+        if (elementOffsetTop + elementHeight - browserHeight < scope.scrollPosition) {
+          scope.options = {
+            animate: {
+              enabled: true
+            },
+            thickness: 4, 
+            mode: 'gauge', 
+            total: 100
+          };  
+        } else if (elementOffsetTop - browserHeight > scope.scrollPosition) {
+          scope.options = {
+            thickness: 0, 
+            mode: 'gauge', 
+            total: 100
+          };
+        }
+        
+        scope.scrollPosition = this.pageYOffset;
+        scope.$apply();
+      });
+    }
+
+    return {
+      restrict: 'A',
+      link: link
+    };
   }]);
