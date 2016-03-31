@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Section Animation Directive opactiy', function () {	
+describe('Section Animation Directive opacity-scroll-animation', function () {	
 	var element;
 	var $scope;
 	var $window;
@@ -18,7 +18,7 @@ describe('Section Animation Directive opactiy', function () {
 		$window = _$window_;
 		$window.innerWidth = 800;
 		$window.innerHeight = 800;
-		element = angular.element('<div opacity class="opacity-0"></div>');
+		element = angular.element('<div opacity-scroll-animation class="opacity-0"></div>');
 		$scope = $rootScope.$new();
 		$compile(element)($scope);
 		spyOn(angular.element, 'prop').and.returnValue(200);

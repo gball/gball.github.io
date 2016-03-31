@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Section Animation Directive passion-fixture', function () {	
+describe('Section Animation Directive passion-images-fixture', function () {	
 	var element;
 	var $scope;
 	var $document;
@@ -20,7 +20,7 @@ describe('Section Animation Directive passion-fixture', function () {
 		$document.find('body').append(element);
 		$scope = $rootScope.$new();
 		$scope.scrollPosition = 300;
-		element = angular.element('<img passion-fixture>');
+		element = angular.element('<img passion-images-fixture>');
 		$compile(element)($scope);
 		spyOn(document, 'getElementById').and.callFake(function() {
 			return {

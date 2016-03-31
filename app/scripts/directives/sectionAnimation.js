@@ -89,7 +89,7 @@ angular.module('gballgithubioApp')
     };
   }])
   // fix the passion images inside the heart at appropriate times
-  .directive('passionFixture', ['$window', function ($window) {
+  .directive('passionImagesFixture', ['$window', function ($window) {
     function link (scope, element) {
       angular.element($window).bind('scroll resize', function() {
         // mobile version for passion images in passion section
@@ -125,7 +125,7 @@ angular.module('gballgithubioApp')
     };
   }])
   // passion section scroll viewing effect (opacity)
-  .directive('opacity', ['$window', function ($window) {
+  .directive('opacityScrollAnimation', ['$window', function ($window) {
     function link (scope, element) {
       angular.element($window).bind('scroll resize', function() {
         //go to mobile view for passion section

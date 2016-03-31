@@ -171,7 +171,7 @@
 				<div class="col-6" id="col-offset">
 					<img heart-fixture src="../images/heart.svg">
 				</div>
-				<div opacity class="opacity-0" ng-repeat="p in passion">
+				<div opacity-scroll-animation class="opacity-0" ng-repeat="p in passion">
 					<div class="row" ng-class="{'passion-item-first': $index==0, 'passion-items': $index!=0}">
 						<div class="col-6 passion-order-text">
 							<h3 class="passion-info-header">
@@ -182,7 +182,7 @@
 							</p>
 						</div>
 						<div class="col-6 passion-order-image">
-							<img passion-fixture ng-src="{{p.imageLink}}">
+							<img passion-images-fixture ng-src="{{p.imageLink}}">
 						</div>
 					</div>
 				</div>
