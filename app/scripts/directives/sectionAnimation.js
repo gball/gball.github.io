@@ -62,20 +62,20 @@ angular.module('gballgithubioApp')
         
         // subtract 600 to adjust for heart image height(400) and for space below(200)
         if (heightFix < scope.scrollPosition && (totalSectionHeight - 600) > scope.scrollPosition) {
-            angular.element('.unfixed-heart').css('margin-top', '0');
-            element.addClass('fixed-heart');
-            element.removeClass('unfixed-heart hide-heart');
+          angular.element('.unfixed-heart').css('margin-top', '0');
+          element.addClass('fixed-heart');
+          element.removeClass('unfixed-heart hide-heart');
         } else if (heightFix >= scope.scrollPosition) {
-            angular.element('.unfixed-heart').css('margin-top', '0');
-            element.addClass('unfixed-heart');
-            element.removeClass('fixed-heart hide-heart');
+          angular.element('.unfixed-heart').css('margin-top', '0');
+          element.addClass('unfixed-heart');
+          element.removeClass('fixed-heart hide-heart');
         } else if ((totalSectionHeight - 600) <= scope.scrollPosition) {
-            // adjust heart image to fix at bottom of passion section when scrolling down
-            var heartTopMargin = document.getElementsByClassName('passion-order-image')[scope.passion.length-1].offsetTop;
-            heartTopMargin -= document.getElementById('col-offset').offsetTop;
-            angular.element('.unfixed-heart').css('margin-top', heartTopMargin + 'px');
-            element.addClass('unfixed-heart');
-            element.removeClass('fixed-heart hide-heart');
+          // adjust heart image to fix at bottom of passion section when scrolling down
+          var heartTopMargin = document.getElementsByClassName('passion-order-image')[scope.passion.length-1].offsetTop;
+          heartTopMargin -= document.getElementById('col-offset').offsetTop;
+          angular.element('.unfixed-heart').css('margin-top', heartTopMargin + 'px');
+          element.addClass('unfixed-heart');
+          element.removeClass('fixed-heart hide-heart');
         }        
         
         scope.scrollPosition = this.pageYOffset;
@@ -104,14 +104,14 @@ angular.module('gballgithubioApp')
 
         // subtract 600 to adjust for heart image height(400) and for space below(200)
         if (heightFix < scope.scrollPosition && (totalSectionHeight - 600) > scope.scrollPosition) {
-            element.addClass('fixed-image');
-            element.removeClass('unfixed-image');
+          element.addClass('fixed-image');
+          element.removeClass('unfixed-image');
         } else if (heightFix >= scope.scrollPosition) {
-            element.addClass('unfixed-image');
-            element.removeClass('fixed-image');
+          element.addClass('unfixed-image');
+          element.removeClass('fixed-image');
         } else if ((totalSectionHeight - 600) <= scope.scrollPosition) {
-            element.addClass('unfixed-image');
-            element.removeClass('fixed-image');
+          element.addClass('unfixed-image');
+          element.removeClass('fixed-image');
         }        
         
         scope.scrollPosition = this.pageYOffset;
@@ -141,38 +141,38 @@ angular.module('gballgithubioApp')
 
         // opacity of element is adjusted based on postion of screen
         if (elementOffsetTop + elementHeight < scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-0');
+          element.removeClass();
+          element.addClass('opacity-0');
         } else if (elementOffsetTop + (elementHeight * 0.8) < scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-1');
+          element.removeClass();
+          element.addClass('opacity-1');
         } else if (elementOffsetTop + (elementHeight * 0.6) < scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-2');
+          element.removeClass();
+          element.addClass('opacity-2');
         } else if (elementOffsetTop + (elementHeight * 0.4) < scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-3');
+          element.removeClass();
+          element.addClass('opacity-3');
         } else if (elementOffsetTop + (elementHeight * 0.2) < scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-4');
+          element.removeClass();
+          element.addClass('opacity-4');
         } else if (elementOffsetTop - browserHeight > scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-0');
+          element.removeClass();
+          element.addClass('opacity-0');
         } else if (elementOffsetTop - browserHeight + (elementHeight * 0.2) > scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-1');
+          element.removeClass();
+          element.addClass('opacity-1');
         } else if (elementOffsetTop - browserHeight + (elementHeight * 0.4) > scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-2');
+          element.removeClass();
+          element.addClass('opacity-2');
         } else if (elementOffsetTop - browserHeight + (elementHeight * 0.6) > scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-3');
+          element.removeClass();
+          element.addClass('opacity-3');
         } else if (elementOffsetTop - browserHeight + (elementHeight * 0.8) > scope.scrollPosition) {
-            element.removeClass();
-            element.addClass('opacity-4');
+          element.removeClass();
+          element.addClass('opacity-4');
         } else {
-            element.removeClass();
-            element.addClass('opacity-5');
+          element.removeClass();
+          element.addClass('opacity-5');
         }
 
         scope.scrollPosition = this.pageYOffset;
