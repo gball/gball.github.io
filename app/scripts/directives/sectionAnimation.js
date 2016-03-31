@@ -10,10 +10,10 @@ angular.module('gballgithubioApp')
           return;
         }
 
-        var height = window.innerHeight;
+        var windowHeight = window.innerHeight;
         var currentElement = angular.element(element.find('img').context);
 
-        if ((currentElement.context.offsetTop - (height / 1.5)) < scope.scrollPosition) {
+        if ((currentElement.context.offsetTop - (windowHeight / 1.5)) < scope.scrollPosition) {
           if (currentElement.hasClass('img-experience-left')) {
             element.removeClass('img-experience-left');
             element.addClass('slide-in-left'); 
@@ -24,7 +24,7 @@ angular.module('gballgithubioApp')
           }
         } 
         
-        if ((currentElement.context.offsetTop - height) > scope.scrollPosition) {
+        if ((currentElement.context.offsetTop - windowHeight) > scope.scrollPosition) {
           if (currentElement.hasClass('slide-in-left')) {
             element.addClass('img-experience-left');
             element.removeClass('slide-in-left');
@@ -57,19 +57,19 @@ angular.module('gballgithubioApp')
         }
 
         // determine when to fix and unfix heart image
-        var heightFix = document.getElementById('col-offset').offsetTop - (document.documentElement.clientHeight * 0.25);
-        var totalSectionHeight = document.getElementById('section-passion').offsetHeight + document.getElementById('section-passion').offsetTop;
+        var heightFixTop = document.getElementById('col-offset').offsetTop - (document.documentElement.clientHeight * 0.25);
+        var heightFixBottom = document.getElementById('section-passion').offsetHeight + document.getElementById('section-passion').offsetTop;
         
         // subtract 600 to adjust for heart image height(400) and for space below(200)
-        if (heightFix < scope.scrollPosition && (totalSectionHeight - 600) > scope.scrollPosition) {
+        if (heightFixTop < scope.scrollPosition && scope.scrollPosition < (heightFixBottom - 600)) {
           angular.element('.unfixed-heart').css('margin-top', '0');
           element.addClass('fixed-heart');
           element.removeClass('unfixed-heart hide-heart');
-        } else if (heightFix >= scope.scrollPosition) {
+        } else if (heightFixTop >= scope.scrollPosition) {
           angular.element('.unfixed-heart').css('margin-top', '0');
           element.addClass('unfixed-heart');
           element.removeClass('fixed-heart hide-heart');
-        } else if ((totalSectionHeight - 600) <= scope.scrollPosition) {
+        } else if ((heightFixBottom - 600) <= scope.scrollPosition) {
           // adjust heart image to fix at bottom of passion section when scrolling down
           var heartTopMargin = document.getElementsByClassName('passion-order-image')[scope.passion.length-1].offsetTop;
           heartTopMargin -= document.getElementById('col-offset').offsetTop;
@@ -99,17 +99,17 @@ angular.module('gballgithubioApp')
           return;
         }
 
-        var heightFix = document.getElementById('col-offset').offsetTop - (document.documentElement.clientHeight * 0.25);
-        var totalSectionHeight = document.getElementById('section-passion').offsetHeight + document.getElementById('section-passion').offsetTop;
+        var heightFixTop = document.getElementById('col-offset').offsetTop - (document.documentElement.clientHeight * 0.25);
+        var heightFixBottom = document.getElementById('section-passion').offsetHeight + document.getElementById('section-passion').offsetTop;
 
         // subtract 600 to adjust for heart image height(400) and for space below(200)
-        if (heightFix < scope.scrollPosition && (totalSectionHeight - 600) > scope.scrollPosition) {
+        if (heightFixTop < scope.scrollPosition && scope.scrollPosition < (heightFixBottom - 600)) {
           element.addClass('fixed-image');
           element.removeClass('unfixed-image');
-        } else if (heightFix >= scope.scrollPosition) {
+        } else if (heightFixTop >= scope.scrollPosition) {
           element.addClass('unfixed-image');
           element.removeClass('fixed-image');
-        } else if ((totalSectionHeight - 600) <= scope.scrollPosition) {
+        } else if ((heightFixBottom - 600) <= scope.scrollPosition) {
           element.addClass('unfixed-image');
           element.removeClass('fixed-image');
         }        
