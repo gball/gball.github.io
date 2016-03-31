@@ -3,7 +3,6 @@
 describe('Section Animation Directive opactiy', function () {	
 	var element;
 	var $scope;
-	var $document;
 	var $window;
 
 	// load the controller's module
@@ -11,105 +10,91 @@ describe('Section Animation Directive opactiy', function () {
 
 	// clean the mock after each test
 	afterEach(function() {
-		document.body.innerHTML = '';
 		angular.element($window).unbind("scroll resize");
 	});
 
 	// initialize the controller and a mock scope prior to each test
-	beforeEach(inject(function($rootScope, _$document_, _$window_, $compile) {
+	beforeEach(inject(function($rootScope, _$window_, $compile) {
 		$window = _$window_;
 		$window.innerWidth = 800;
-		$window.innerHeight = 500;
-		$document = _$document_;
-		$document.find('body').append(element);
-		element = angular.element('<div opacity class="enter-0">');
+		$window.innerHeight = 800;
+		element = angular.element('<div opacity class="opacity-0"></div>');
 		$scope = $rootScope.$new();
 		$compile(element)($scope);
-		spyOn(document, 'getElementById').and.callFake(function() {
-			return {
-				offsetTop: 800,
-				offsetHeight: 600
-			};
-		});
+		spyOn(angular.element, 'prop').and.returnValue(200);
 	}));
 	
 	// run tests
 	it('should hide animation in mobile view', function() {
 		$window.innerWidth = 300;
 		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('entered')).toBe(true);
-		expect(element.hasClass('enter-0')).toBe(false);
+		expect(element.hasClass('opacity-5')).toBe(true);
+		expect(element.hasClass('opacity-0')).toBe(false);
 	});
 
-	it('return element with enter-0 class', function() {
-		$scope.scrollPosition = -805;
+	it('return element with opacity-0 class when leaving viewport', function() {
+		$scope.scrollPosition = 450;
 		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-0')).toBe(true);
+		expect(element.hasClass('opacity-0')).toBe(true);
 	});
 
-	it('return element with enter-1 class', function() {
-		$scope.scrollPosition = -445;
+	it('return element with opacity-1 class when leaving viewport', function() {
+		$scope.scrollPosition = 400;
 		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-1')).toBe(true);
+		expect(element.hasClass('opacity-1')).toBe(true);
 	});
 
-	it('return element with enter-2 class', function() {
-		$scope.scrollPosition = -400;
+	it('return element with opacity-2 class when leaving viewport', function() {
+		$scope.scrollPosition = 350;
 		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-2')).toBe(true);
+		expect(element.hasClass('opacity-2')).toBe(true);
 	});
 
-	it('return element with enter-3 class', function() {
-		$scope.scrollPosition = -350;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-3')).toBe(true);
-	});
-
-	it('return element with enter-4 class', function() {
-		$scope.scrollPosition = -250;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-4')).toBe(true);
-	});
-
-	it('return element with entered class', function() {
-		$scope.scrollPosition = -150;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('entered')).toBe(true);
-	});
-
-	it('return element with enter-4 class', function() {
-		$scope.scrollPosition = -100;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-4')).toBe(true);
-	});
-
-	it('return element with enter-3 class', function() {
-		$scope.scrollPosition = -50;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-3')).toBe(true);
-	});
-
-	it('return element with enter-2 class', function() {
-		$scope.scrollPosition = 10;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-2')).toBe(true);
-	});
-
-	it('return element with enter-1 class', function() {
-		$scope.scrollPosition = 100;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-1')).toBe(true);
-	});
-
-	it('return element with enter-5 class', function() {
-		$scope.scrollPosition = 200;
-		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-5')).toBe(true);
-	});
-
-	it('return element with enter-0 class', function() {
+	it('return element with opacity-3 class when leaving viewport', function() {
 		$scope.scrollPosition = 300;
 		angular.element($window).triggerHandler('scroll');
-		expect(element.hasClass('enter-0')).toBe(true);
+		expect(element.hasClass('opacity-3')).toBe(true);
+	});
+
+	it('return element with opacity-4 class when leaving viewport', function() {
+		$scope.scrollPosition = 250;
+		angular.element($window).triggerHandler('scroll');
+		expect(element.hasClass('opacity-4')).toBe(true);
+	});
+
+	it('return element with opacity-0 class when entering viewport', function() {
+		$scope.scrollPosition = -700;
+		angular.element($window).triggerHandler('scroll');
+		expect(element.hasClass('opacity-0')).toBe(true);
+	});
+
+	it('return element with opacity-1 class when entering viewport', function() {
+		$scope.scrollPosition = -600;
+		angular.element($window).triggerHandler('scroll');
+		expect(element.hasClass('opacity-1')).toBe(true);
+	});
+
+	it('return element with opacity-2 class when entering viewport', function() {
+		$scope.scrollPosition = -550;
+		angular.element($window).triggerHandler('scroll');
+		expect(element.hasClass('opacity-2')).toBe(true);
+	});
+
+	it('return element with opacity-3 class when entering viewport', function() {
+		$scope.scrollPosition = -500;
+		angular.element($window).triggerHandler('scroll');
+		expect(element.hasClass('opacity-3')).toBe(true);
+	});
+
+	it('return element with opacity-4 class when entering viewport', function() {
+		$scope.scrollPosition = -450;
+		angular.element($window).triggerHandler('scroll');
+		expect(element.hasClass('opacity-4')).toBe(true);
+	});
+
+	it('return element with opacity-5 class when in viewport', function() {
+		$scope.scrollPosition = 0;
+		angular.element($window).triggerHandler('scroll');
+		expect(element.hasClass('opacity-5')).toBe(true);
 	});
 });

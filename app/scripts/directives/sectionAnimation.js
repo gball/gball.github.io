@@ -131,50 +131,48 @@ angular.module('gballgithubioApp')
         //go to mobile view for passion section
         if (window.innerWidth <= 700) {
           element.removeClass();
-          element.addClass('entered');
+          element.addClass('opacity-5');
           return;
         }
+        
+        var browserHeight = window.innerHeight; 
+        var elementHeight = element.prop('offsetHeight');
+        var elementOffsetTop = element.prop('offsetTop');
 
-        var divTop = element.context.offsetTop;
-        var browserHeight = window.innerHeight;   
-
-        // at a certain height in the browser adjust the opacity
-        if (divTop - (browserHeight * 1.0) >= scope.scrollPosition) {
+        // opacity of element is adjusted based on postion of screen
+        if (elementOffsetTop + elementHeight < scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-0');
-        } else if (divTop - (browserHeight * 0.83) >= scope.scrollPosition) {
-            element.removeClass(); 
-            element.addClass('enter-1');
-        } else if (divTop - (browserHeight * 0.73) >= scope.scrollPosition) {
+            element.addClass('opacity-0');
+        } else if (elementOffsetTop + (elementHeight * 0.8) < scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-2');
-        } else if (divTop - (browserHeight * 0.65) >= scope.scrollPosition) {
+            element.addClass('opacity-1');
+        } else if (elementOffsetTop + (elementHeight * 0.6) < scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-3');
-        } else if (divTop - (browserHeight * 0.5) >= scope.scrollPosition) {
+            element.addClass('opacity-2');
+        } else if (elementOffsetTop + (elementHeight * 0.4) < scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-4');
-        } else if (divTop - (browserHeight * 0.25) >= scope.scrollPosition) {
+            element.addClass('opacity-3');
+        } else if (elementOffsetTop + (elementHeight * 0.2) < scope.scrollPosition) {
             element.removeClass();
-            element.addClass('entered');
-        } else if (divTop - (browserHeight * 0.15) >= scope.scrollPosition) {
+            element.addClass('opacity-4');
+        } else if (elementOffsetTop - browserHeight > scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-4');
-        } else if (divTop - (browserHeight * 0.05) >= scope.scrollPosition) {
+            element.addClass('opacity-0');
+        } else if (elementOffsetTop - browserHeight + (elementHeight * 0.2) > scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-3');
-        } else if (divTop - (browserHeight * -0.15) >= scope.scrollPosition) {
+            element.addClass('opacity-1');
+        } else if (elementOffsetTop - browserHeight + (elementHeight * 0.4) > scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-2');
-        } else if (divTop - (browserHeight * -0.3) >= scope.scrollPosition) {
+            element.addClass('opacity-2');
+        } else if (elementOffsetTop - browserHeight + (elementHeight * 0.6) > scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-1');
-        } else if (divTop - (browserHeight * -0.4) >= scope.scrollPosition) {
+            element.addClass('opacity-3');
+        } else if (elementOffsetTop - browserHeight + (elementHeight * 0.8) > scope.scrollPosition) {
             element.removeClass();
-            element.addClass('enter-5');
-        } else if (divTop - (browserHeight * -0.4) < scope.scrollPosition) {
+            element.addClass('opacity-4');
+        } else {
             element.removeClass();
-            element.addClass('enter-0');
+            element.addClass('opacity-5');
         }
 
         scope.scrollPosition = this.pageYOffset;

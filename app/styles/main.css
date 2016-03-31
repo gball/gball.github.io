@@ -664,31 +664,27 @@ Passion Section Styles
   padding: 20px;
 }
 
-.enter-0 {
-  opacity: 0.0;
+.opacity-0 {
+  opacity: 0;
 }
 
-.enter-1 {
+.opacity-1 {
   opacity: 0.2;
 }
 
-.enter-2 {
+.opacity-2 {
   opacity: 0.4;
 }
 
-.enter-3 {
+.opacity-3 {
   opacity: 0.6;
 }
 
-.enter-4 {
+.opacity-4 {
   opacity: 0.8;
 }
 
-.enter-5 {
-  opacity: 0.1;
-}
-
-.entered {
+.opacity-5 {
   opacity: 1;
 }
 
