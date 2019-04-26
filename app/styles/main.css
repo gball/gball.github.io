@@ -179,6 +179,7 @@ Navigation Styles
   display: block;
   top: 0.5vh;
   z-index: 999;
+  cursor: pointer;
 }
 
 /***************************
@@ -1144,6 +1145,7 @@ Media Queries Styles
     width: 48px;
     height: 48px;
     top: 0;
+    cursor: pointer;
   }
 
   #header-image {
