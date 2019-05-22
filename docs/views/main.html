@@ -1,0 +1,231 @@
+<!-- navigation -->
+<div menu-click id="menu-icon">
+	<img src="../images/menu.svg">
+</div>
+<nav id="navbar" class="navbar-hide">
+	<ul>
+		<li>
+  	  <a href="#/" scroll-to="section-about" ng-class="{true:'active'}[isActive == 2]">about</a>
+		</li>
+		<li>
+  	  <a href="#/" scroll-to="section-education" ng-class="{true:'active'}[isActive == 3]">school</a>
+		</li>
+		<li>
+  	  <a href="#/" scroll-to="section-experience" ng-class="{true:'active'}[isActive == 4]">careers</a>
+		</li>
+		<li>
+  	  <a href="#/" id="nav-name" class="active" scroll-to="header-image" ng-class="{true:'active'}[isActive == 1]">rsb</a>
+		</li>
+		<li>
+  	  <a href="#/" scroll-to="section-passion" ng-class="{true:'active'}[isActive == 5]">passion</a>
+		</li>
+		<li>
+  	  <a href="#/" scroll-to="section-abilities" ng-class="{true:'active'}[isActive == 6]">abilities</a>
+		</li>
+		<li>
+  	  <a href="#/" scroll-to="section-contact" ng-class="{true:'active'}[isActive == 7]">contact</a>
+		</li>
+	</ul>
+</nav>
+<!-- header section -->
+<div id="header-image">
+  <h1>
+  	Robin Singh Ball
+  </h1>
+  <h3>
+  	Get to know me
+  </h3>
+  <div id="arrow-continer">
+	  <a href="#/" arrow-scroll scroll-to="section-about" id="arrow"></a>
+  </div>
+</div>
+<!-- About me section -->
+<div id="section-about">
+	<div class="container">
+		<h1>
+			About Me
+		</h1>
+		<h2>
+			{{quotes[0].quote}}
+		</h2>
+		<hr>
+		<img ng-src="{{aboutMe.imageLink}}" id="selfie" alt="Robin Ball Selfie">
+		<div id="about-mini-info">
+			<h3>
+				{{aboutMe.name}}
+			</h3>
+			<h4>
+				{{getAge()}} yeard old, {{aboutMe.location}}
+			</h4>
+		</div>
+		<p id="about-info">
+			{{aboutMe.backgroundInfo}}
+		</p>
+	</div>
+</div>
+<!-- Education section -->
+<div id="section-education">
+	<div class="container">
+		<h1>
+			Education
+		</h1>
+		<h2>
+			{{quotes[1].quote}}
+		</h2>
+		<hr>
+		<div class="row" id="education-font">
+			<div class="col-6">
+				<div id="box-cat">
+					<img id="education-img" ng-src="{{education[1].imageLink}}">
+					<p>
+						{{education[1].schoolName}}
+					<br>
+						{{education[1].degree}}
+					<br>
+						{{education[1].date}}
+					<br>
+						GPA {{education[1].gpa}}
+					</p>
+				</div>
+			</div>
+			<div class="col-6">
+				<div id="box-dragon">
+					<img id="education-img" ng-src="{{education[0].imageLink}}">
+					<p>
+						{{education[0].schoolName}}
+					<br>
+						{{education[0].degree}}
+					<br>
+						{{education[0].date}}
+					<br>
+						{{education[0].location}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Experience section -->
+<div id="section-experience">
+	<div class="container">
+		<h1>
+			Experience
+		</h1>
+		<h2>
+			{{quotes[2].quote}}
+		</h2>
+		<hr>
+		<!-- iterate through experience data and place images with even index on right and odd on left -->
+		<div ng-repeat="exp in experience">
+			<div ng-if="$index % 2 == 0">
+				<div class="row">
+					<div class="col-6 img-height">
+						<img slide-in-animation class="img-experience-left" ng-src="{{exp.imageLink}}">
+					</div>
+					<div class="col-6 text-experience">
+						<h3>
+							{{exp.position}}
+						</h3>
+						<h4>
+							{{exp.company}}
+						</h4>
+						<p class="text-mini-experience">
+							{{exp.info}}
+						</p>
+					</div>
+				</div>
+			</div>
+			<div ng-if="$index % 2 == 1">
+				<div class="row">
+					<div class="col-6 text-experience experience-text-order">
+						<h3>
+							{{exp.position}}
+						</h3>
+						<h4>
+							{{exp.company}}
+						</h4>
+						<p class="text-mini-experience">
+							{{exp.info}}
+						</p>
+					</div>
+					<div class="col-6 img-height experience-img-order">
+						<img slide-in-animation class="img-experience-right" ng-src="{{exp.imageLink}}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Passion section -->
+<div id="section-passion">
+	<div class="container">
+		<h1>
+			Passion
+		</h1>
+		<h2>
+			{{quotes[3].quote}}
+		</h2>
+		<hr>
+		<div>
+			<div id="passion-container">
+				<div class="col-6" id="col-offset">
+					<img heart-fixture src="../images/heart.svg">
+				</div>
+				<div opacity-scroll-animation class="opacity-0" ng-repeat="p in passion">
+					<div class="row" ng-class="{'passion-item-first': $index==0, 'passion-items': $index!=0}">
+						<div class="col-6 passion-order-text">
+							<h3 class="passion-info-header">
+								{{p.type}}
+							</h3>
+							<p class="passion-info-text">
+								{{p.info}}
+							</p>
+						</div>
+						<div class="col-6 passion-order-image">
+							<img passion-images-fixture ng-src="{{p.imageLink}}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Abilities section -->
+<div id="section-abilities">
+	<div class="container">
+		<h1>
+			Abilities
+		</h1>
+		<h2>
+			{{quotes[4].quote}}
+		</h2>
+		<hr>
+		<div class="graph-row">
+			<div ng-repeat="data in graphData" class="col-4">
+				<div graph-animation class="graphs">
+			  		<pie-chart data="data" options="options"></pie-chart>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Contact section -->
+<div id="section-contact">
+	<div class="container">
+		<div class="contact-row">
+			<a href="https://github.com/gball"> 
+				<img src="../images/github.svg" class="contact-icon">
+			</a>
+			<a href="https://www.facebook.com/robin.ball.39"> 
+				<img src="../images/facebook.svg" class="contact-icon">
+			</a>
+			<a href="https://www.linkedin.com/in/gobind-ball-34475978"> 
+				<img src="../images/linkedin.svg" class="contact-icon">
+			</a>
+			<a href="mailto:gobindball32@gmail.com"> 
+				<img src="../images/gmail.svg" class="contact-icon">
+			</a>
+			</div>
+		</div>
+	</div>
+</div>
